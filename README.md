@@ -2,7 +2,14 @@
 
 Welcome to adibaIcon Library! This library contains a collection of customizable icons that you can easily integrate into your projects.
 
-<img src="./img/Screenshot.png">
+<img src="./img/v1/Screenshot from 2023-08-30 01-44-35.png">
+
+<img src="./img/v1/Screenshot from 2023-08-30 01-44-55.png">
+
+## CDN 
+
+- Use as cdn : https://adibaicon.vercel.app/css/adibaIcon.css
+    
 
 ## Getting Started
 
