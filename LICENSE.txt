@@ -1,12 +1,10 @@
 Font license info
 
 
-## Brandico
+# adibaIcon 
 
-   (C) 2012 by Vitaly Puzrin
+   (C) 2023 by Md Rasheduzzaman
 
-   Author:    Crowdsourced, for Fontello project
-   License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  
+   Author:    Md Rasheduzzaman
 
 

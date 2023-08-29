@@ -1,6 +1,6 @@
-# adibaIcon Library Documentation
+# adibaIcon Library 
 
-Welcome to the documentation for adibaIcon Library! This library contains a collection of customizable icons that you can easily integrate into your projects.
+Welcome to adibaIcon Library! This library contains a collection of customizable icons that you can easily integrate into your projects.
 
 <img src="./img/Screenshot.png">
 
