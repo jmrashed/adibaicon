@@ -10,7 +10,8 @@ Welcome to adibaIcon Library! This library contains a collection of customizable
 
 - Use as cdn : https://adibaicon.vercel.app/css/adibaIcon.css
     
-
+## Demo 
+- Demo - https://adibaicon.vercel.app
 ## Getting Started
 
 To use the icons from this library, follow these steps:
