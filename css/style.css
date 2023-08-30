@@ -1,4 +1,4 @@
-
+/* Header S t a r t */
 .header-social .single-list {
     display: inline-block;
     border-right: 0px !important;
@@ -198,7 +198,8 @@
   .mobile_menu .slicknav_menu .slicknav_nav .slicknav_arrow {
     color: var(--primary);
   }
-  
+
+  /* End-of Header  */
 
   .py-100{
     padding-top: 50px;
@@ -207,7 +208,7 @@
 
 
 
-  /* Search */
+  /* Search S t a r t*/
 .search-box.style-five {
     width: 100%;
   }
@@ -233,7 +234,7 @@
     right: auto;
     left: 0;
     top: 0;
-    border-radius:8px
+    border-radius:8px;
     padding: 5px 18px;
     font-size: 16px;
   }
@@ -302,6 +303,7 @@
   input:focus-visible {
 	outline: none;
 }
+/* End-of Search bar */
 
 button {
 	text-decoration: none;
@@ -310,3 +312,4 @@ button {
 a {
 	text-decoration: none;
 }
+
