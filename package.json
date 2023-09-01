@@ -1,0 +1,26 @@
+{
+  "name": "adibaicon",
+  "version": "1.0.0",
+  "description": "This is a premium icon library and it is opensourece",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmrashed/adibaicon.git"
+  },
+  "keywords": [
+    "icon",
+    "adiba",
+    "premium",
+    "assets",
+    "font"
+  ],
+  "author": "jmrashed@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmrashed/adibaicon/issues"
+  },
+  "homepage": "https://github.com/jmrashed/adibaicon#readme"
+}
