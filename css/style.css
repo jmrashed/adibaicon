@@ -37,10 +37,10 @@
     }
   }
   
-  .header-area {
+  /* .header-area {
     -webkit-box-shadow: 0 0 10px 0 rgba(6, 27, 40, 0.1);
             box-shadow: 0 0 10px 0 rgba(6, 27, 40, 0.1);
-  }
+  } */
   @media (max-width: 991px) {
     .header-area {
       padding: 18px 10px;
@@ -246,7 +246,6 @@
   
   .search-box.style-five .input-form input {
     position: relative;
-    border: 1px solid #EAECF0;
     border-radius: 0px;
     margin-bottom: 20px;
     background: none;
@@ -256,7 +255,7 @@
     font-size: 16px;
     font-weight: 300;
     position: relative;
-    border: 1px solid #EAECF0;
+    border: 1px solid #2C4373;
     margin-bottom: 20px;
     padding: 9px 18px 9px 20px;
     padding-right: 75px;
