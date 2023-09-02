@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
   <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <meta charset="UTF-8">
   <style>
@@ -10,18 +9,15 @@
       -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
     }
-
     a:focus {
       outline: thin dotted #333;
       outline: 5px auto -webkit-focus-ring-color;
       outline-offset: -2px;
     }
-
     a:hover,
     a:active {
       outline: 0;
     }
-
     input {
       margin: 0;
       font-size: 100%;
@@ -29,12 +25,10 @@
       overflow: visible;
       line-height: normal;
     }
-
     input::-moz-focus-inner {
       padding: 0;
       border: 0;
     }
-
     body {
       margin: 0;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -43,33 +37,27 @@
       color: #333;
       background-color: #fff;
     }
-
     a {
       color: #08c;
       text-decoration: none;
     }
-
     a:hover {
-      color: #005580;
+      color: #000;
       text-decoration: underline;
     }
-
     .row {
       margin-left: -20px;
       zoom: 1;
     }
-
     .row:before,
     .row:after {
       display: table;
       content: "";
       line-height: 0;
     }
-
     .row:after {
       clear: both;
     }
-
     .span3 {
       float: left;
       min-height: 1px;
@@ -77,29 +65,24 @@
       width: 220px;
       margin-bottom: 15px;
     }
-
     .container {
       width: 940px;
       margin-right: auto;
       margin-left: auto;
       *zoom: 1;
     }
-
     .container:before,
     .container:after {
       display: table;
       content: "";
       line-height: 0;
     }
-
     .container:after {
       clear: both;
     }
-
     small {
       font-size: 85%;
     }
-
     h1 {
       margin: 10px 0;
       font-family: inherit;
@@ -110,7 +93,6 @@
       line-height: 40px;
       font-size: 38.5px;
     }
-
     h1 small {
       font-weight: normal;
       line-height: 1;
@@ -119,576 +101,223 @@
     }
 
     .header {
-
+      
       background-color: #fff;
       border-bottom: 1px solid #ddd;
       padding-top: 10px;
       z-index: 10;
     }
-
     .footer {
       color: #ddd;
       font-size: 12px;
       text-align: center;
       margin-top: 20px;
     }
-
     .footer a {
       color: #ccc;
       text-decoration: underline;
     }
-
     .the-icons {
       font-size: 14px;
       line-height: 24px;
     }
-
     .switch {
       color: #666;
     }
-
     .switch input {
       margin-right: 0.3em;
     }
-
     .codesOn .i-name {
       display: none;
     }
-
     .codesOn .i-code {
       display: inline;
     }
-
     .i-code {
       display: none;
     }
-
     @font-face {
       font-family: 'adibaIcon';
       src: url('./font/adibaIcon.eot?46132523');
       src: url('./font/adibaIcon.eot?46132523#iefix') format('embedded-opentype'),
-        url('./font/adibaIcon.woff?46132523') format('woff'),
-        url('./font/adibaIcon.ttf?46132523') format('truetype'),
-        url('./font/adibaIcon.svg?46132523#adibaIcon') format('svg');
+           url('./font/adibaIcon.woff?46132523') format('woff'),
+           url('./font/adibaIcon.ttf?46132523') format('truetype'),
+           url('./font/adibaIcon.svg?46132523#adibaIcon') format('svg');
       font-weight: normal;
       font-style: normal;
     }
-
     .adiba-icon {
       font-family: "adibaIcon";
       font-style: normal;
       font-weight: normal;
       speak: never;
-
+     
       display: inline-block;
       text-decoration: inherit;
       width: 1em;
       margin-right: .2em;
       text-align: center;
       /* opacity: .8; */
-
+     
       /* For safety - reset parent styles, that can break glyph codes*/
       font-variant: normal;
       text-transform: none;
-
+     
       /* fix buttons height, for twitter bootstrap */
       line-height: 1em;
-
+     
       /* Animation center compensation - margins should be symmetric */
       /* remove if not needed */
       margin-left: .2em;
-
+     
       /* You can be more comfortable with increased icons size */
       /* font-size: 120%; */
-
+     
       /* Font smoothing. That was taken from TWBS */
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-
+     
       /* Uncomment for 3D effect */
       /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
     }
+    </style>
 
-    /* Search results container */
-    .search-results {
-      display: none;
-      margin-top: 10px;
-    }
-
-    /* Search result list style */
-    #searchResults li {
-      margin: 5px 0;
-    }
-
-    /* Style for search result links */
-    #searchResults a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-
-    /* Responsive design for smaller screens */
-    @media (max-width: 768px) {
-      .input-form {
-        max-width: 100%;
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/doc.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+      function toggleCodes(on) {
+        var obj = document.getElementById('icons');
+      
+        if (on) {
+          obj.className += ' codesOn';
+        } else {
+          obj.className = obj.className.replace(' codesOn', '');
+        }
       }
-
-      .input-form button {
-        width: 100%;
-      }
-    }
-  </style>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/animation.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script>
-    function toggleCodes(on) {
-      var obj = document.getElementById('icons');
-
-      if (on) {
-        obj.className += ' codesOn';
-      } else {
-        obj.className = obj.className.replace(' codesOn', '');
-      }
-    }
-  </script>
-</head>
+    </script>
+  </head>
 
 
-<body>
+  <body class="bd-masthead">
 
-  <header>
-    <div class="header-area">
-      <div class="main-header">
-        <div class="container">
-          <div class="row align-items-center">
-            <!-- Logo -->
-            <div class="col-xl-5 col-lg-5">
-              <h1>adibaIcon <small>font demo</small></h1>
+    <header>
+      <div class="header-area">
+          <div class="main-header">
+              <div class="container">
+                  <div class="row align-items-center">
+                      <!-- Logo -->
+                      <div class="col-xl-5 col-lg-5">
+                        <a href="index.html">
+                          <h1>adibaIcon </h1>
+                        </a>
 
-            </div>
-            <div class="col-xl-7 col-lg-7">
-              <div class="menu-wrapper  d-flex align-items-center justify-content-end">
-                <!-- Main-menu -->
-                <div class="main-menu d-none d-lg-block">
-                  <nav>
-                    <ul class="listing" id="navigation">
-                      <li class="single-list"><a href="#" class="single">icons</a></li>
-                      <li class="single-list"><a href="https://github.com/jmrashed/adibaicon" class="single">Doc</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
+                      </div>
+                      <div class="col-xl-7 col-lg-7">
+                          <div class="menu-wrapper  d-flex align-items-center justify-content-end">
+                              <!-- Main-menu -->
+                              <div class="main-menu d-none d-lg-block">
+                                  <nav>
+                                      <ul class="listing" id="navigation">
+                                          <li class="single-list"><a href="icons.html" target="_blank" class="single">icons</a></li>
+                                          <li class="single-list"><a href="https://github.com/jmrashed/adibaicon" target="_blank" class="single">Doc</a></li>
+                                      </ul>
+                                  </nav>
+                              </div>
+                          </div>
+                      </div> 
+                      <!-- Mobile Menu -->
+                      <div class="col-12">
+                          <div class="mobile_menu d-block d-lg-none"></div>
+                      </div>
+                  </div>
               </div>
-            </div>
-            <!-- Mobile Menu -->
-            <div class="col-12">
-              <div class="mobile_menu d-block d-lg-none"></div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   </header>
 
 
 
-  <div class="container py-100" id="icons">
-    <div class="row">
+    <div class="container py-100" id="icons">
 
-      <div class="col-lg-12 mb-2">
-        <form action="javascript:void(0)" class="search-box style-five text-center">
-          <div class="input-form">
-            <input type="text" name="search" id="search" placeholder="Search">
-            <!-- icon -->
-            <button type="button">search</button>
+      <section class="row g-md-5 pb-md-5 mb-5 align-items-center">
+        <div class="col-lg-8 mb-5">
+          <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-pink-rgb);">
+            <svg class="bi fs-1"><use xlink:href="#braces">
+              <symbol id="braces" viewBox="0 0 16 16">
+                <path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z"></path>
+              </symbol>
+            </use></svg>
           </div>
-        </form>
-        <div class="search-results d-none">
-          <ul id="searchResults">
-            <!-- Search results will be dynamically populated here -->
-          </ul>
+          <h2 class="display-5 mb-3 fw-semibold lh-sm ">Customizable icons easily integrate &nbsp;into your projects.</h2>
+          <p class="lead fw-normal">
+            Welcome to adibaIcon Library! This library contains a collection of customizable icons that you can easily integrate into your projects.
+          </p>
+          <p class="d-flex align-items-start flex-column lead fw-normal mb-0">
+            <a href="https://github.com/jmrashed/adibaicon"  target="_blank" class="icon-link icon-link-hover fw-semibold mb-3">
+              Learn more about fonts
+              <svg class="bi"><use xlink:href="#arrow-right"></use></svg>
+            </a>
+          </p>
         </div>
-      </div>
 
-      <div class="col-lg-12 mb-4 ">
-        <label class="switch text-right">
-          <input type="checkbox" onclick="toggleCodes(this.checked)">show codes
-        </label>
-      </div>
 
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe800">
-          <i class="adiba-icon icon-style1-a">&#xe800;</i> <span class="i-name">icon-style1-a</span><span
-            class="i-code">0xe800</span>
-        </div>
-        <div class="span3" title="Code: 0xe801">
-          <i class="adiba-icon icon-style1-b">&#xe801;</i> <span class="i-name">icon-style1-b</span><span
-            class="i-code">0xe801</span>
-        </div>
-        <div class="span3" title="Code: 0xe802">
-          <i class="adiba-icon icon-style1-c">&#xe802;</i> <span class="i-name">icon-style1-c</span><span
-            class="i-code">0xe802</span>
-        </div>
-        <div class="span3" title="Code: 0xe803">
-          <i class="adiba-icon icon-style1-d">&#xe803;</i> <span class="i-name">icon-style1-d</span><span
-            class="i-code">0xe803</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe804">
-          <i class="adiba-icon icon-style1-e">&#xe804;</i> <span class="i-name">icon-style1-e</span><span
-            class="i-code">0xe804</span>
-        </div>
-        <div class="span3" title="Code: 0xe805">
-          <i class="adiba-icon icon-style1-f">&#xe805;</i> <span class="i-name">icon-style1-f</span><span
-            class="i-code">0xe805</span>
-        </div>
-        <div class="span3" title="Code: 0xe806">
-          <i class="adiba-icon icon-style1-g">&#xe806;</i> <span class="i-name">icon-style1-g</span><span
-            class="i-code">0xe806</span>
-        </div>
-        <div class="span3" title="Code: 0xe807">
-          <i class="adiba-icon icon-style1-h">&#xe807;</i> <span class="i-name">icon-style1-h</span><span
-            class="i-code">0xe807</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe808">
-          <i class="adiba-icon icon-style1-i">&#xe808;</i> <span class="i-name">icon-style1-i</span><span
-            class="i-code">0xe808</span>
-        </div>
-        <div class="span3" title="Code: 0xe809">
-          <i class="adiba-icon icon-style1-j">&#xe809;</i> <span class="i-name">icon-style1-j</span><span
-            class="i-code">0xe809</span>
-        </div>
-        <div class="span3" title="Code: 0xe80a">
-          <i class="adiba-icon icon-style1-k">&#xe80a;</i> <span class="i-name">icon-style1-k</span><span
-            class="i-code">0xe80a</span>
-        </div>
-        <div class="span3" title="Code: 0xe80b">
-          <i class="adiba-icon icon-style1-l">&#xe80b;</i> <span class="i-name">icon-style1-l</span><span
-            class="i-code">0xe80b</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe80c">
-          <i class="adiba-icon icon-style1-m">&#xe80c;</i> <span class="i-name">icon-style1-m</span><span
-            class="i-code">0xe80c</span>
-        </div>
-        <div class="span3" title="Code: 0xe80d">
-          <i class="adiba-icon icon-style1-n">&#xe80d;</i> <span class="i-name">icon-style1-n</span><span
-            class="i-code">0xe80d</span>
-        </div>
-        <div class="span3" title="Code: 0xe80e">
-          <i class="adiba-icon icon-style1-o">&#xe80e;</i> <span class="i-name">icon-style1-o</span><span
-            class="i-code">0xe80e</span>
-        </div>
-        <div class="span3" title="Code: 0xe80f">
-          <i class="adiba-icon icon-style1-p">&#xe80f;</i> <span class="i-name">icon-style1-p</span><span
-            class="i-code">0xe80f</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe810">
-          <i class="adiba-icon icon-style1-q">&#xe810;</i> <span class="i-name">icon-style1-q</span><span
-            class="i-code">0xe810</span>
-        </div>
-        <div class="span3" title="Code: 0xe811">
-          <i class="adiba-icon icon-style1-r">&#xe811;</i> <span class="i-name">icon-style1-r</span><span
-            class="i-code">0xe811</span>
-        </div>
-        <div class="span3" title="Code: 0xe812">
-          <i class="adiba-icon icon-style1-s">&#xe812;</i> <span class="i-name">icon-style1-s</span><span
-            class="i-code">0xe812</span>
-        </div>
-        <div class="span3" title="Code: 0xe813">
-          <i class="adiba-icon icon-style1-t">&#xe813;</i> <span class="i-name">icon-style1-t</span><span
-            class="i-code">0xe813</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe814">
-          <i class="adiba-icon icon-style1-u">&#xe814;</i> <span class="i-name">icon-style1-u</span><span
-            class="i-code">0xe814</span>
-        </div>
-        <div class="span3" title="Code: 0xe815">
-          <i class="adiba-icon icon-style1-v">&#xe815;</i> <span class="i-name">icon-style1-v</span><span
-            class="i-code">0xe815</span>
-        </div>
-        <div class="span3" title="Code: 0xe816">
-          <i class="adiba-icon icon-style1-w">&#xe816;</i> <span class="i-name">icon-style1-w</span><span
-            class="i-code">0xe816</span>
-        </div>
-        <div class="span3" title="Code: 0xe817">
-          <i class="adiba-icon icon-style1-x">&#xe817;</i> <span class="i-name">icon-style1-x</span><span
-            class="i-code">0xe817</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe818">
-          <i class="adiba-icon icon-style1-y">&#xe818;</i> <span class="i-name">icon-style1-y</span><span
-            class="i-code">0xe818</span>
-        </div>
-        <div class="span3" title="Code: 0xe819">
-          <i class="adiba-icon icon-style1-z">&#xe819;</i> <span class="i-name">icon-style1-z</span><span
-            class="i-code">0xe819</span>
-        </div>
-        <div class="span3" title="Code: 0xe81a">
-          <i class="adiba-icon icon-style2-a">&#xe81a;</i> <span class="i-name">icon-style2-a</span><span
-            class="i-code">0xe81a</span>
-        </div>
-        <div class="span3" title="Code: 0xe81b">
-          <i class="adiba-icon icon-style2-b">&#xe81b;</i> <span class="i-name">icon-style2-b</span><span
-            class="i-code">0xe81b</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe81c">
-          <i class="adiba-icon icon-style2-c">&#xe81c;</i> <span class="i-name">icon-style2-c</span><span
-            class="i-code">0xe81c</span>
-        </div>
-        <div class="span3" title="Code: 0xe81d">
-          <i class="adiba-icon icon-style2-d">&#xe81d;</i> <span class="i-name">icon-style2-d</span><span
-            class="i-code">0xe81d</span>
-        </div>
-        <div class="span3" title="Code: 0xe81e">
-          <i class="adiba-icon icon-style2-e">&#xe81e;</i> <span class="i-name">icon-style2-e</span><span
-            class="i-code">0xe81e</span>
-        </div>
-        <div class="span3" title="Code: 0xe81f">
-          <i class="adiba-icon icon-style2-f">&#xe81f;</i> <span class="i-name">icon-style2-f</span><span
-            class="i-code">0xe81f</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe820">
-          <i class="adiba-icon icon-style2-g">&#xe820;</i> <span class="i-name">icon-style2-g</span><span
-            class="i-code">0xe820</span>
-        </div>
-        <div class="span3" title="Code: 0xe821">
-          <i class="adiba-icon icon-style2-h">&#xe821;</i> <span class="i-name">icon-style2-h</span><span
-            class="i-code">0xe821</span>
-        </div>
-        <div class="span3" title="Code: 0xe822">
-          <i class="adiba-icon icon-style2-i">&#xe822;</i> <span class="i-name">icon-style2-i</span><span
-            class="i-code">0xe822</span>
-        </div>
-        <div class="span3" title="Code: 0xe823">
-          <i class="adiba-icon icon-style2-j">&#xe823;</i> <span class="i-name">icon-style2-j</span><span
-            class="i-code">0xe823</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe824">
-          <i class="adiba-icon icon-style2-k">&#xe824;</i> <span class="i-name">icon-style2-k</span><span
-            class="i-code">0xe824</span>
-        </div>
-        <div class="span3" title="Code: 0xe825">
-          <i class="adiba-icon icon-style2-l">&#xe825;</i> <span class="i-name">icon-style2-l</span><span
-            class="i-code">0xe825</span>
-        </div>
-        <div class="span3" title="Code: 0xe826">
-          <i class="adiba-icon icon-style2-m">&#xe826;</i> <span class="i-name">icon-style2-m</span><span
-            class="i-code">0xe826</span>
-        </div>
-        <div class="span3" title="Code: 0xe827">
-          <i class="adiba-icon icon-style2-n">&#xe827;</i> <span class="i-name">icon-style2-n</span><span
-            class="i-code">0xe827</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe828">
-          <i class="adiba-icon icon-style2-o">&#xe828;</i> <span class="i-name">icon-style2-o</span><span
-            class="i-code">0xe828</span>
-        </div>
-        <div class="span3" title="Code: 0xe829">
-          <i class="adiba-icon icon-style2-p">&#xe829;</i> <span class="i-name">icon-style2-p</span><span
-            class="i-code">0xe829</span>
-        </div>
-        <div class="span3" title="Code: 0xe82a">
-          <i class="adiba-icon icon-style2-q">&#xe82a;</i> <span class="i-name">icon-style2-q</span><span
-            class="i-code">0xe82a</span>
-        </div>
-        <div class="span3" title="Code: 0xe82b">
-          <i class="adiba-icon icon-style2-r">&#xe82b;</i> <span class="i-name">icon-style2-r</span><span
-            class="i-code">0xe82b</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe82c">
-          <i class="adiba-icon icon-style2-s">&#xe82c;</i> <span class="i-name">icon-style2-s</span><span
-            class="i-code">0xe82c</span>
-        </div>
-        <div class="span3" title="Code: 0xe82d">
-          <i class="adiba-icon icon-style2-t">&#xe82d;</i> <span class="i-name">icon-style2-t</span><span
-            class="i-code">0xe82d</span>
-        </div>
-        <div class="span3" title="Code: 0xe82e">
-          <i class="adiba-icon icon-style2-u">&#xe82e;</i> <span class="i-name">icon-style2-u</span><span
-            class="i-code">0xe82e</span>
-        </div>
-        <div class="span3" title="Code: 0xe82f">
-          <i class="adiba-icon icon-style2-v">&#xe82f;</i> <span class="i-name">icon-style2-v</span><span
-            class="i-code">0xe82f</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe830">
-          <i class="adiba-icon icon-style2-w">&#xe830;</i> <span class="i-name">icon-style2-w</span><span
-            class="i-code">0xe830</span>
-        </div>
-        <div class="span3" title="Code: 0xe831">
-          <i class="adiba-icon icon-style2-x">&#xe831;</i> <span class="i-name">icon-style2-x</span><span
-            class="i-code">0xe831</span>
-        </div>
-        <div class="span3" title="Code: 0xe832">
-          <i class="adiba-icon icon-style2-y">&#xe832;</i> <span class="i-name">icon-style2-y</span><span
-            class="i-code">0xe832</span>
-        </div>
-        <div class="span3" title="Code: 0xe833">
-          <i class="adiba-icon icon-style2-z">&#xe833;</i> <span class="i-name">icon-style2-z</span><span
-            class="i-code">0xe833</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe834">
-          <i class="adiba-icon icon-style3-a">&#xe834;</i> <span class="i-name">icon-style3-a</span><span
-            class="i-code">0xe834</span>
-        </div>
-        <div class="span3" title="Code: 0xe835">
-          <i class="adiba-icon icon-style3-b">&#xe835;</i> <span class="i-name">icon-style3-b</span><span
-            class="i-code">0xe835</span>
-        </div>
-        <div class="span3" title="Code: 0xe836">
-          <i class="adiba-icon icon-style3-c">&#xe836;</i> <span class="i-name">icon-style3-c</span><span
-            class="i-code">0xe836</span>
-        </div>
-        <div class="span3" title="Code: 0xe837">
-          <i class="adiba-icon icon-style3-d">&#xe837;</i> <span class="i-name">icon-style3-d</span><span
-            class="i-code">0xe837</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe838">
-          <i class="adiba-icon icon-style3-e">&#xe838;</i> <span class="i-name">icon-style3-e</span><span
-            class="i-code">0xe838</span>
-        </div>
-        <div class="span3" title="Code: 0xe839">
-          <i class="adiba-icon icon-style3-f">&#xe839;</i> <span class="i-name">icon-style3-f</span><span
-            class="i-code">0xe839</span>
-        </div>
-        <div class="span3" title="Code: 0xe83a">
-          <i class="adiba-icon icon-style3-g">&#xe83a;</i> <span class="i-name">icon-style3-g</span><span
-            class="i-code">0xe83a</span>
-        </div>
-        <div class="span3" title="Code: 0xe83b">
-          <i class="adiba-icon icon-style3-h">&#xe83b;</i> <span class="i-name">icon-style3-h</span><span
-            class="i-code">0xe83b</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe83c">
-          <i class="adiba-icon icon-style3-i">&#xe83c;</i> <span class="i-name">icon-style3-i</span><span
-            class="i-code">0xe83c</span>
-        </div>
-        <div class="span3" title="Code: 0xe83d">
-          <i class="adiba-icon icon-style3-j">&#xe83d;</i> <span class="i-name">icon-style3-j</span><span
-            class="i-code">0xe83d</span>
-        </div>
-        <div class="span3" title="Code: 0xe83e">
-          <i class="adiba-icon icon-style3-k">&#xe83e;</i> <span class="i-name">icon-style3-k</span><span
-            class="i-code">0xe83e</span>
-        </div>
-        <div class="span3" title="Code: 0xe83f">
-          <i class="adiba-icon icon-style3-l">&#xe83f;</i> <span class="i-name">icon-style3-l</span><span
-            class="i-code">0xe83f</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe840">
-          <i class="adiba-icon icon-style3-m">&#xe840;</i> <span class="i-name">icon-style3-m</span><span
-            class="i-code">0xe840</span>
-        </div>
-        <div class="span3" title="Code: 0xe841">
-          <i class="adiba-icon icon-style3-n">&#xe841;</i> <span class="i-name">icon-style3-n</span><span
-            class="i-code">0xe841</span>
-        </div>
-        <div class="span3" title="Code: 0xe842">
-          <i class="adiba-icon icon-style3-o">&#xe842;</i> <span class="i-name">icon-style3-o</span><span
-            class="i-code">0xe842</span>
-        </div>
-        <div class="span3" title="Code: 0xe843">
-          <i class="adiba-icon icon-style3-p">&#xe843;</i> <span class="i-name">icon-style3-p</span><span
-            class="i-code">0xe843</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe844">
-          <i class="adiba-icon icon-style3-q">&#xe844;</i> <span class="i-name">icon-style3-q</span><span
-            class="i-code">0xe844</span>
-        </div>
-        <div class="span3" title="Code: 0xe845">
-          <i class="adiba-icon icon-style3-r">&#xe845;</i> <span class="i-name">icon-style3-r</span><span
-            class="i-code">0xe845</span>
-        </div>
-        <div class="span3" title="Code: 0xe846">
-          <i class="adiba-icon icon-style3-s">&#xe846;</i> <span class="i-name">icon-style3-s</span><span
-            class="i-code">0xe846</span>
-        </div>
-        <div class="span3" title="Code: 0xe847">
-          <i class="adiba-icon icon-style3-t">&#xe847;</i> <span class="i-name">icon-style3-t</span><span
-            class="i-code">0xe847</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe848">
-          <i class="adiba-icon icon-style3-u">&#xe848;</i> <span class="i-name">icon-style3-u</span><span
-            class="i-code">0xe848</span>
-        </div>
-        <div class="span3" title="Code: 0xe849">
-          <i class="adiba-icon icon-style3-v">&#xe849;</i> <span class="i-name">icon-style3-v</span><span
-            class="i-code">0xe849</span>
-        </div>
-        <div class="span3" title="Code: 0xe84a">
-          <i class="adiba-icon icon-style3-w">&#xe84a;</i> <span class="i-name">icon-style3-w</span><span
-            class="i-code">0xe84a</span>
-        </div>
-        <div class="span3" title="Code: 0xe84b">
-          <i class="adiba-icon icon-style3-x">&#xe84b;</i> <span class="i-name">icon-style3-x</span><span
-            class="i-code">0xe84b</span>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="span3" title="Code: 0xe84c">
-          <i class="adiba-icon icon-style3-y">&#xe84c;</i> <span class="i-name">icon-style3-y</span><span
-            class="i-code">0xe84c</span>
-        </div>
-        <div class="span3" title="Code: 0xe84d">
-          <i class="adiba-icon icon-style3-z">&#xe84d;</i> <span class="i-name">icon-style3-z</span><span
-            class="i-code">0xe84d</span>
-        </div>
-      </div>
-    </div>
+        <div class="row gx-md-5">
+          <div class="col-lg-6 mb-3">
+            <h3 class="fw-semibold mb-2">Basic Usage</h3>
+            <p class="mb-0">Sets the icon color to primary <code> .icon-primary</code>  <code> .icon-secondary</code></p>
+            <p class="mb-0"> Increases the icon size to large <code> .icon-lg</code> <code> .icon-red</code></p>
 
-  </div>
-  <footer class="footer">
-    <div class="container">
-      <p style="color: #005580;">&copy; Copyright by <a style="color: #005580;" href="https://github.com/jmrashed">Md
-          Rasheduzzaman</a> |
-        <a style="color: #005580;" href="README.html">Documentation</a>
 
-      </p>
-    </div>
-  </footer>
+            <div class="bd-code-snippet mt-4">  <div class="bd-clipboard">    <button type="button" class="btn-clipboard">      <svg class="bi" role="img" aria-label="Copy"><use xlink:href="#clipboard"></use></svg>    </button>  </div>
+            
+<div class="highlight">
+<pre tabindex="0" class="chroma m-0"><code class="language-scss" data-lang="scss">
+<span class="line"><span class="cl"><span class="nc">CDN</span> </span></span><span class="line"><span class="cl"> <span class="n"> https://adibaicon.vercel.app/css/adibaIcon.css</span>
+</span></span>
+</code></pre>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</div>
+    
+          </div>
 
-  <script src="assets/js/main.js"></script>
-</body>
+         
 
+          </div>
+          <div class="col-lg-6 mb-3">
+            <h3 class="fw-semibold">Customizing via icons size & color</h3>
+            <p class="mb-0"> Increases the icon size to large <code> .icon-lg</code> <code> .icon-md</code></p>
+
+            <div class="highlight highlight-text-html-basic notranslate position-relative overflow-auto mt-2" dir="auto">
+<pre><span class="pl-kos">&lt;</span><span class="pl-ent">i</span> <span class="pl-c1">class</span>="<span class="pl-s">adiba-icon icon-r icon-lg icon-red </span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">i</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">i</span> <span class="pl-c1">class</span>="<span class="pl-s">adiba-icon icon-a icon-lg icon-blue </span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">i</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">i</span> <span class="pl-c1">class</span>="<span class="pl-s">adiba-icon icon-s icon-lg icon-yellow </span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">i</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">i</span> <span class="pl-c1">class</span>="<span class="pl-s">adiba-icon icon-h icon-lg icon-purple</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">i</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">i</span> <span class="pl-c1">class</span>="<span class="pl-s">adiba-icon icon-e icon-lg icon-green</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">i</span><span class="pl-kos">&gt;</span>
+</pre>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+
+
+
+ </div>
+
+    
+    <footer class="footer">
+      <div class="container">
+        <p style="color: #000;">&copy; Copyright by <a style="color: #000;" href="https://github.com/jmrashed">Md Rasheduzzaman</a> | 
+        <a style="color: #000;" href="README.html">Documentation</a>
+        
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+  </body>
 </html>
