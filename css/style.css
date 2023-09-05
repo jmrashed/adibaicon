@@ -362,3 +362,7 @@ a {
   opacity: 1;
   width: 11px;
 }
+
+a:hover{
+  text-decoration: none;
+}
