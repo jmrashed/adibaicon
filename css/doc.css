@@ -2675,3 +2675,19 @@
     opacity:1
   }
   
+
+  .dropdown-menu-end[data-bs-popper] {
+      padding: 10px;
+      border: 0;
+      background: rgba(var(--bs-body-color-rgb), 0.075);
+  }
+
+   .dropdown-item:focus, .dropdown-item:hover {
+    border-radius: 6px;
+    background: none;
+  }
+
+  .dropdown-item.active, .dropdown-item:active {
+    background-color: #0000009c;
+    border-radius: 5px;
+  }
