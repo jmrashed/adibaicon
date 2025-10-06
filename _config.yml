@@ -1,0 +1,21 @@
+title: adibaIcon
+description: A lightweight, customizable icon font library
+url: "https://jmrashed.github.io"
+baseurl: "/adibaicon"
+
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - node_modules/
+  - scripts/
+  - src/
+  - .github/
+  - package.json
+  - webpack.config.js
+  - vercel.json
+  - netlify.toml

@@ -1,15 +1,8 @@
 {
   "version": 2,
   "name": "adibaicon",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "."
-      }
-    }
-  ],
+  "buildCommand": "npm run build:all",
+  "outputDirectory": ".",
   "routes": [
     {
       "src": "/dist/(.*)",

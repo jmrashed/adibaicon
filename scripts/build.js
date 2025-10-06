@@ -52,7 +52,8 @@ fs.writeFileSync('dist/css/adibaIcon.min.css', updatedCssMin);
 
 // Generate SVG icons
 try {
-  require('./generate-svg.js');
+  const { execSync } = require('child_process');
+  execSync('node scripts/generate-svg.js', { stdio: 'inherit' });
 } catch (error) {
   console.log('⚠️ SVG generation skipped');
 }
