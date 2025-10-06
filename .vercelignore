@@ -1,6 +1,5 @@
 node_modules
 .git
-scripts
 src
 .github
 webpack.config.js

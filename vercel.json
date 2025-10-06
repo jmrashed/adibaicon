@@ -1,3 +1,3 @@
 {
-  "buildCommand": "npm run build:all"
+  "buildCommand": "echo 'Static site - no build needed'"
 }
