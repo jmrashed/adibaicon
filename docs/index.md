@@ -21,7 +21,6 @@ adibaicon/
 ├── docs/               # Documentation
 ├── integrations/       # Framework components
 ├── tools/              # Developer tools
-├── community/          # Community features
 └── scripts/            # Build scripts
 ```
 
