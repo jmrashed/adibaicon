@@ -1,4 +1,10 @@
 {
   "buildCommand": "echo 'Static site - no build needed'",
-  "outputDirectory": "."
+  "outputDirectory": "docs/v2.2.1",
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    }
+  ]
 }

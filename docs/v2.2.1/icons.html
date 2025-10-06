@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="adibaIcon Gallery - Browse all 78+ icons in 3 different styles">
+    <meta name="keywords" content="icon gallery, adibaicon, icon font, css icons">
+    <meta name="author" content="Md Rasheduzzaman">
+    
+    <title>adibaIcon Gallery - All Icons</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/adibaicon@latest/dist/css/adibaIcon.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --card-bg: #ffffff;
+            --border-color: #dee2e6;
+        }
+        
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --card-bg: #2d2d2d;
+            --border-color: #404040;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        
+        #mainNav {
+            background-color: var(--card-bg);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--text-color) !important;
+        }
+        
+        .navbar-nav .nav-link {
+            color: var(--text-color) !important;
+            font-weight: 500;
+        }
+        
+        .navbar-toggler {
+            color: var(--text-color);
+        }
+        
+        [data-theme="dark"] #mainNav {
+            background-color: var(--card-bg);
+        }
+        
+        [data-theme="dark"] .navbar-toggler {
+            color: var(--text-color);
+        }
+        
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .icon-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .icon-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+        
+        .icon-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .icon-name {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .icon-code {
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.85rem;
+            color: #666;
+            background: #f8f9fa;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        
+        [data-theme="dark"] .icon-code {
+            background: #404040;
+            color: #ccc;
+        }
+        
+        .search-box {
+            max-width: 400px;
+            margin: 0 auto 30px;
+        }
+        
+        .section-title {
+            color: var(--text-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin: 40px 0 20px;
+        }
+        
+        .copy-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .copy-notification.show {
+            transform: translateX(0);
+        }
+        
+        /* Ensure adibaIcon font family is applied */
+        [class^="icon-"]:before, [class*=" icon-"]:before {
+            font-family: "adibaIcon" !important;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            color: #e2e8f0;
+            padding: 60px 0 20px;
+        }
+        
+        .footer h4, .footer h6 {
+            color: #ffffff;
+            font-weight: 600;
+        }
+        
+        .footer p, .footer li {
+            color: #cbd5e0;
+            font-size: 15px;
+        }
+        
+        .footer a {
+            color: #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: var(--primary-color);
+            transform: translateX(3px);
+        }
+        
+        .social-links a {
+            color: #cbd5e0;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .social-links a:hover {
+            color: #ffffff;
+            background: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .icon-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 15px;
+            }
+            
+            .icon-card {
+                padding: 15px;
+            }
+            
+            .icon-card i {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg shadow-sm fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="icon-style1-a text-primary me-2"></i>adibaIcon Gallery
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-4"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="icons.html">Icons</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html#installation">Installation</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="doc.html">Docs</a></li>
+                    <li class="nav-item mt-2 mt-lg-0">
+                        <button class="btn btn-outline-secondary ms-lg-2 me-2" id="theme-toggle" title="Toggle theme">
+                            <i class="bi bi-sun-fill" id="theme-icon"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-lg-2" href="https://github.com/jmrashed/adibaicon" target="_blank">
+                            <i class="bi bi-github me-1"></i>GitHub
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 100px; padding-bottom: 50px;">
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold">Icon Gallery</h1>
+            <p class="lead text-muted">Browse all 78+ icons in 3 different styles. Click any icon to copy its class name.</p>
+        </div>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" class="form-control form-control-lg" id="searchInput" placeholder="Search icons..." onkeyup="searchIcons()">
+        </div>
+
+        <!-- Style 1: Standard Icons -->
+        <h2 class="section-title">📝 Standard Style (26 icons)</h2>
+        <div class="icon-grid" id="style1-grid">
+            <div class="icon-card" onclick="copyClass('icon-style1-a')">
+                <i class="icon-style1-a"></i>
+                <div class="icon-name">icon-style1-a</div>
+                <div class="icon-code">0xe800</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-b')">
+                <i class="icon-style1-b"></i>
+                <div class="icon-name">icon-style1-b</div>
+                <div class="icon-code">0xe801</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-c')">
+                <i class="icon-style1-c"></i>
+                <div class="icon-name">icon-style1-c</div>
+                <div class="icon-code">0xe802</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-d')">
+                <i class="icon-style1-d"></i>
+                <div class="icon-name">icon-style1-d</div>
+                <div class="icon-code">0xe803</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-e')">
+                <i class="icon-style1-e"></i>
+                <div class="icon-name">icon-style1-e</div>
+                <div class="icon-code">0xe804</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-f')">
+                <i class="icon-style1-f"></i>
+                <div class="icon-name">icon-style1-f</div>
+                <div class="icon-code">0xe805</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-g')">
+                <i class="icon-style1-g"></i>
+                <div class="icon-name">icon-style1-g</div>
+                <div class="icon-code">0xe806</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-h')">
+                <i class="icon-style1-h"></i>
+                <div class="icon-name">icon-style1-h</div>
+                <div class="icon-code">0xe807</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-i')">
+                <i class="icon-style1-i"></i>
+                <div class="icon-name">icon-style1-i</div>
+                <div class="icon-code">0xe808</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-j')">
+                <i class="icon-style1-j"></i>
+                <div class="icon-name">icon-style1-j</div>
+                <div class="icon-code">0xe809</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-k')">
+                <i class="icon-style1-k"></i>
+                <div class="icon-name">icon-style1-k</div>
+                <div class="icon-code">0xe80a</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-l')">
+                <i class="icon-style1-l"></i>
+                <div class="icon-name">icon-style1-l</div>
+                <div class="icon-code">0xe80b</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-m')">
+                <i class="icon-style1-m"></i>
+                <div class="icon-name">icon-style1-m</div>
+                <div class="icon-code">0xe80c</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-n')">
+                <i class="icon-style1-n"></i>
+                <div class="icon-name">icon-style1-n</div>
+                <div class="icon-code">0xe80d</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-o')">
+                <i class="icon-style1-o"></i>
+                <div class="icon-name">icon-style1-o</div>
+                <div class="icon-code">0xe80e</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-p')">
+                <i class="icon-style1-p"></i>
+                <div class="icon-name">icon-style1-p</div>
+                <div class="icon-code">0xe80f</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-q')">
+                <i class="icon-style1-q"></i>
+                <div class="icon-name">icon-style1-q</div>
+                <div class="icon-code">0xe810</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-r')">
+                <i class="icon-style1-r"></i>
+                <div class="icon-name">icon-style1-r</div>
+                <div class="icon-code">0xe811</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-s')">
+                <i class="icon-style1-s"></i>
+                <div class="icon-name">icon-style1-s</div>
+                <div class="icon-code">0xe812</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-t')">
+                <i class="icon-style1-t"></i>
+                <div class="icon-name">icon-style1-t</div>
+                <div class="icon-code">0xe813</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-u')">
+                <i class="icon-style1-u"></i>
+                <div class="icon-name">icon-style1-u</div>
+                <div class="icon-code">0xe814</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-v')">
+                <i class="icon-style1-v"></i>
+                <div class="icon-name">icon-style1-v</div>
+                <div class="icon-code">0xe815</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-w')">
+                <i class="icon-style1-w"></i>
+                <div class="icon-name">icon-style1-w</div>
+                <div class="icon-code">0xe816</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-x')">
+                <i class="icon-style1-x"></i>
+                <div class="icon-name">icon-style1-x</div>
+                <div class="icon-code">0xe817</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-y')">
+                <i class="icon-style1-y"></i>
+                <div class="icon-name">icon-style1-y</div>
+                <div class="icon-code">0xe818</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style1-z')">
+                <i class="icon-style1-z"></i>
+                <div class="icon-name">icon-style1-z</div>
+                <div class="icon-code">0xe819</div>
+            </div>
+        </div>
+
+        <!-- Style 2: Alternative Icons -->
+        <h2 class="section-title">🎨 Alternative Style (26 icons)</h2>
+        <div class="icon-grid" id="style2-grid">
+            <div class="icon-card" onclick="copyClass('icon-style2-a')">
+                <i class="icon-style2-a"></i>
+                <div class="icon-name">icon-style2-a</div>
+                <div class="icon-code">0xe81a</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-b')">
+                <i class="icon-style2-b"></i>
+                <div class="icon-name">icon-style2-b</div>
+                <div class="icon-code">0xe81b</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-c')">
+                <i class="icon-style2-c"></i>
+                <div class="icon-name">icon-style2-c</div>
+                <div class="icon-code">0xe81c</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-d')">
+                <i class="icon-style2-d"></i>
+                <div class="icon-name">icon-style2-d</div>
+                <div class="icon-code">0xe81d</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-e')">
+                <i class="icon-style2-e"></i>
+                <div class="icon-name">icon-style2-e</div>
+                <div class="icon-code">0xe81e</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-f')">
+                <i class="icon-style2-f"></i>
+                <div class="icon-name">icon-style2-f</div>
+                <div class="icon-code">0xe81f</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-g')">
+                <i class="icon-style2-g"></i>
+                <div class="icon-name">icon-style2-g</div>
+                <div class="icon-code">0xe820</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-h')">
+                <i class="icon-style2-h"></i>
+                <div class="icon-name">icon-style2-h</div>
+                <div class="icon-code">0xe821</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-i')">
+                <i class="icon-style2-i"></i>
+                <div class="icon-name">icon-style2-i</div>
+                <div class="icon-code">0xe822</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-j')">
+                <i class="icon-style2-j"></i>
+                <div class="icon-name">icon-style2-j</div>
+                <div class="icon-code">0xe823</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-k')">
+                <i class="icon-style2-k"></i>
+                <div class="icon-name">icon-style2-k</div>
+                <div class="icon-code">0xe824</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-l')">
+                <i class="icon-style2-l"></i>
+                <div class="icon-name">icon-style2-l</div>
+                <div class="icon-code">0xe825</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-m')">
+                <i class="icon-style2-m"></i>
+                <div class="icon-name">icon-style2-m</div>
+                <div class="icon-code">0xe826</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-n')">
+                <i class="icon-style2-n"></i>
+                <div class="icon-name">icon-style2-n</div>
+                <div class="icon-code">0xe827</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-o')">
+                <i class="icon-style2-o"></i>
+                <div class="icon-name">icon-style2-o</div>
+                <div class="icon-code">0xe828</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-p')">
+                <i class="icon-style2-p"></i>
+                <div class="icon-name">icon-style2-p</div>
+                <div class="icon-code">0xe829</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-q')">
+                <i class="icon-style2-q"></i>
+                <div class="icon-name">icon-style2-q</div>
+                <div class="icon-code">0xe82a</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-r')">
+                <i class="icon-style2-r"></i>
+                <div class="icon-name">icon-style2-r</div>
+                <div class="icon-code">0xe82b</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-s')">
+                <i class="icon-style2-s"></i>
+                <div class="icon-name">icon-style2-s</div>
+                <div class="icon-code">0xe82c</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-t')">
+                <i class="icon-style2-t"></i>
+                <div class="icon-name">icon-style2-t</div>
+                <div class="icon-code">0xe82d</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-u')">
+                <i class="icon-style2-u"></i>
+                <div class="icon-name">icon-style2-u</div>
+                <div class="icon-code">0xe82e</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-v')">
+                <i class="icon-style2-v"></i>
+                <div class="icon-name">icon-style2-v</div>
+                <div class="icon-code">0xe82f</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-w')">
+                <i class="icon-style2-w"></i>
+                <div class="icon-name">icon-style2-w</div>
+                <div class="icon-code">0xe830</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-x')">
+                <i class="icon-style2-x"></i>
+                <div class="icon-name">icon-style2-x</div>
+                <div class="icon-code">0xe831</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-y')">
+                <i class="icon-style2-y"></i>
+                <div class="icon-name">icon-style2-y</div>
+                <div class="icon-code">0xe832</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style2-z')">
+                <i class="icon-style2-z"></i>
+                <div class="icon-name">icon-style2-z</div>
+                <div class="icon-code">0xe833</div>
+            </div>
+        </div>
+
+        <!-- Style 3: Bold Icons -->
+        <h2 class="section-title">💪 Bold Style (26 icons)</h2>
+        <div class="icon-grid" id="style3-grid">
+            <div class="icon-card" onclick="copyClass('icon-style3-a')">
+                <i class="icon-style3-a"></i>
+                <div class="icon-name">icon-style3-a</div>
+                <div class="icon-code">0xe834</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-b')">
+                <i class="icon-style3-b"></i>
+                <div class="icon-name">icon-style3-b</div>
+                <div class="icon-code">0xe835</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-c')">
+                <i class="icon-style3-c"></i>
+                <div class="icon-name">icon-style3-c</div>
+                <div class="icon-code">0xe836</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-d')">
+                <i class="icon-style3-d"></i>
+                <div class="icon-name">icon-style3-d</div>
+                <div class="icon-code">0xe837</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-e')">
+                <i class="icon-style3-e"></i>
+                <div class="icon-name">icon-style3-e</div>
+                <div class="icon-code">0xe838</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-f')">
+                <i class="icon-style3-f"></i>
+                <div class="icon-name">icon-style3-f</div>
+                <div class="icon-code">0xe839</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-g')">
+                <i class="icon-style3-g"></i>
+                <div class="icon-name">icon-style3-g</div>
+                <div class="icon-code">0xe83a</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-h')">
+                <i class="icon-style3-h"></i>
+                <div class="icon-name">icon-style3-h</div>
+                <div class="icon-code">0xe83b</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-i')">
+                <i class="icon-style3-i"></i>
+                <div class="icon-name">icon-style3-i</div>
+                <div class="icon-code">0xe83c</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-j')">
+                <i class="icon-style3-j"></i>
+                <div class="icon-name">icon-style3-j</div>
+                <div class="icon-code">0xe83d</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-k')">
+                <i class="icon-style3-k"></i>
+                <div class="icon-name">icon-style3-k</div>
+                <div class="icon-code">0xe83e</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-l')">
+                <i class="icon-style3-l"></i>
+                <div class="icon-name">icon-style3-l</div>
+                <div class="icon-code">0xe83f</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-m')">
+                <i class="icon-style3-m"></i>
+                <div class="icon-name">icon-style3-m</div>
+                <div class="icon-code">0xe840</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-n')">
+                <i class="icon-style3-n"></i>
+                <div class="icon-name">icon-style3-n</div>
+                <div class="icon-code">0xe841</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-o')">
+                <i class="icon-style3-o"></i>
+                <div class="icon-name">icon-style3-o</div>
+                <div class="icon-code">0xe842</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-p')">
+                <i class="icon-style3-p"></i>
+                <div class="icon-name">icon-style3-p</div>
+                <div class="icon-code">0xe843</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-q')">
+                <i class="icon-style3-q"></i>
+                <div class="icon-name">icon-style3-q</div>
+                <div class="icon-code">0xe844</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-r')">
+                <i class="icon-style3-r"></i>
+                <div class="icon-name">icon-style3-r</div>
+                <div class="icon-code">0xe845</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-s')">
+                <i class="icon-style3-s"></i>
+                <div class="icon-name">icon-style3-s</div>
+                <div class="icon-code">0xe846</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-t')">
+                <i class="icon-style3-t"></i>
+                <div class="icon-name">icon-style3-t</div>
+                <div class="icon-code">0xe847</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-u')">
+                <i class="icon-style3-u"></i>
+                <div class="icon-name">icon-style3-u</div>
+                <div class="icon-code">0xe848</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-v')">
+                <i class="icon-style3-v"></i>
+                <div class="icon-name">icon-style3-v</div>
+                <div class="icon-code">0xe849</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-w')">
+                <i class="icon-style3-w"></i>
+                <div class="icon-name">icon-style3-w</div>
+                <div class="icon-code">0xe84a</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-x')">
+                <i class="icon-style3-x"></i>
+                <div class="icon-name">icon-style3-x</div>
+                <div class="icon-code">0xe84b</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-y')">
+                <i class="icon-style3-y"></i>
+                <div class="icon-name">icon-style3-y</div>
+                <div class="icon-code">0xe84c</div>
+            </div>
+            <div class="icon-card" onclick="copyClass('icon-style3-z')">
+                <i class="icon-style3-z"></i>
+                <div class="icon-name">icon-style3-z</div>
+                <div class="icon-code">0xe84d</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copy Notification -->
+    <div class="copy-notification" id="copyNotification">
+        Class name copied to clipboard!
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-3"><i class="icon-style1-a me-2"></i>adibaIcon</h4>
+                    <p class="text-light mb-3 lh-lg">A professional, lightweight icon font library designed for modern web development. Features 78+ customizable icons in multiple styles with full accessibility support.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/jmrashed/adibaicon" target="_blank" class="me-3" title="GitHub Repository">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://www.npmjs.com/package/adibaicon" target="_blank" class="me-3" title="NPM Package">
+                            <i class="bi bi-box-seam"></i>
+                        </a>
+                        <a href="mailto:jmrashed@gmail.com" title="Email Contact">
+                            <i class="bi bi-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <h6 class="text-white mb-3">Resources</h6>
+                    <ul class="list-unstyled lh-lg">
+                        <li class="mb-2"><a href="icons.html" class="text-light text-decoration-none">Icon Gallery</a></li>
+                        <li class="mb-2"><a href="doc.html" class="text-light text-decoration-none">Documentation</a></li>
+                        <li class="mb-2"><a href="https://github.com/jmrashed/adibaicon" class="text-light text-decoration-none">GitHub</a></li>
+                        <li class="mb-2"><a href="https://www.npmjs.com/package/adibaicon" class="text-light text-decoration-none">NPM Package</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <h6 class="text-white mb-3">Support</h6>
+                    <ul class="list-unstyled lh-lg">
+                        <li class="mb-2"><a href="https://github.com/jmrashed/adibaicon/issues" class="text-light text-decoration-none">Report Issues</a></li>
+                        <li class="mb-2"><a href="mailto:jmrashed@gmail.com" class="text-light text-decoration-none">Contact</a></li>
+                        <li class="mb-2"><a href="LICENSE" class="text-light text-decoration-none">MIT License</a></li>
+                        <li class="mb-2"><a href="CHANGELOG.md" class="text-light text-decoration-none">Changelog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h6 class="text-white mb-3">Quick Start</h6>
+                    <p class="text-light mb-3 lh-lg">Get started with adibaIcon in seconds using our CDN or NPM package.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-success px-3 py-2">v2.2.1</span>
+                        <span class="badge bg-info px-3 py-2">MIT License</span>
+                        <span class="badge bg-warning text-dark px-3 py-2">101KB</span>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-light">&copy; 2024 adibaIcon. Made with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://github.com/jmrashed" class="text-primary text-decoration-none fw-medium">Md Rasheduzzaman</a></p>
+                </div>
+                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                    <small class="text-light opacity-75">Open source icon font library for developers worldwide</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Dark mode toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        updateThemeIcon(currentTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const theme = document.documentElement.getAttribute('data-theme');
+            const newTheme = theme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+        
+        function updateThemeIcon(theme) {
+            themeIcon.className = theme === 'dark' ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
+        }
+
+        // Copy class name functionality
+        function copyClass(className) {
+            navigator.clipboard.writeText(className).then(() => {
+                showCopyNotification();
+            });
+        }
+
+        function showCopyNotification() {
+            const notification = document.getElementById('copyNotification');
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 2000);
+        }
+
+        // Search functionality
+        function searchIcons() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const iconCards = document.querySelectorAll('.icon-card');
+            
+            iconCards.forEach(card => {
+                const iconName = card.querySelector('.icon-name').textContent.toLowerCase();
+                if (iconName.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 {
   "name": "adibaicon",
-  "version": "2.2.0",
+  "version": "2.2.2",
   "description": "A lightweight, customizable icon font library with 78+ letter-based and UI icons in multiple styles. Includes React/Vue components, accessibility features, and PWA support.",
   "main": "dist/css/adibaIcon.css",
   "module": "dist/js/adibaIcon.esm.js",
@@ -22,8 +22,9 @@
     "dev": "webpack --mode=development --watch",
     "optimize:fonts": "node scripts/optimize-fonts.js",
     "build:all": "npm run build && npm run optimize:fonts",
-
-    "prepublishOnly": "npm run build:all",
+    "prepublishOnly": "npm run build:all && npm run docs:version",
+    "docs:version": "node scripts/version-docs.js",
+    "docs:serve": "npx http-server docs -p 8080",
     "test": "echo \"Tests will be added in future versions\" && exit 0",
     "clean": "rmdir /s /q dist 2>nul || echo \"Dist cleaned\"",
     "generate:svg": "node scripts/generate-svg.js",
@@ -86,10 +87,13 @@
     "doc": "docs",
     "example": "tools"
   },
-  "os": ["darwin", "linux", "win32"],
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
   "engines": {
-    "node": "22.x"
+    "node": ">=18.0.0"
   },
-  "devDependencies": {},
   "dependencies": {}
 }

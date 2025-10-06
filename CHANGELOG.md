@@ -2,59 +2,44 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
-## [2.2.0] - 2025-01-XX
-
-### Added
-- 95+ icons across 4 categories (Letters, UI, Arrows, Social)
-- React and Vue.js components
-- SCSS and LESS source files
-- SVG icon versions
-- PWA features (service worker, manifest)
-- Comprehensive accessibility support
-- Font optimization and subsetting
-- Multiple deployment platforms
-
-### Changed
-- Unified naming convention to `adiba-*`
-- Improved build system with Webpack
-- Enhanced documentation structure
-- Better performance optimizations
+## [2.2.2] - 2024-12-19
 
 ### Fixed
-- Font loading issues
-- Cross-browser compatibility
-- Deployment pipeline issues
-
-## [2.1.1] - 2025-01-XX
-
-### Added
-- Enhanced build system
-- Font optimization pipeline
-- SCSS variables and mixins
-
-### Fixed
-- Build process improvements
-- Documentation updates
-
-## [2.1.0] - 2025-01-XX
-
-### Added
-- Semantic UI icons
-- Alternative and bold icon styles
-- Performance optimizations
-- Accessibility features
+- Fixed version switching navigation between v1.0.0 and v2.2.1 documentation
+- Updated CSS paths in v1.0.0 documentation files to use CDN links
+- Corrected Vercel configuration to serve from `docs/v2.2.1` as default directory
+- Fixed broken dropdown navigation links in all documentation versions
+- Removed references to missing local CSS files in v1.0.0 docs
 
 ### Changed
-- Naming convention improvements
-- Better CSS organization
+- Updated Vercel deployment configuration with proper rewrites
+- Improved navigation consistency across documentation versions
+- Enhanced version dropdown menus with proper active states
 
-## [1.0.0] - 2023-XX-XX
+## [2.2.1] - 2024-12-18
 
 ### Added
-- Initial release
-- 26 letter icons in 3 styles
+- Complete documentation overhaul with modern design
+- Dark mode support for documentation
+- Interactive icon gallery with search functionality
+- Copy-to-clipboard functionality for code examples
+- Comprehensive installation guides (CDN, NPM, Download)
+- Framework integration examples (React, Vue.js)
+- Performance optimization guidelines
+- Accessibility documentation
+- Migration guide from v1.x to v2.x
+
+### Enhanced
+- 78+ icons across 3 different styles
+- Improved CSS organization and structure
+- Better browser compatibility
+- Enhanced font loading performance
+
+## [1.0.0] - 2023-08-30
+
+### Added
+- Initial release of adibaIcon library
+- 78 letter-based icons (A-Z) in 3 styles
 - Basic CSS implementation
-- Font formats (EOT, WOFF, TTF, SVG)
+- Font files in multiple formats (EOT, WOFF, TTF, SVG)
+- Simple documentation and examples
