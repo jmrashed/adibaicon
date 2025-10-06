@@ -83,7 +83,7 @@
     "url": "https://github.com/sponsors/jmrashed"
   },
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "devDependencies": {},
   "dependencies": {}
