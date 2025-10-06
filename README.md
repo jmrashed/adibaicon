@@ -150,9 +150,18 @@ MIT License - see [LICENSE.txt](LICENSE.txt)
 - GitHub: [@jmrashed](https://github.com/jmrashed)
 - Email: jmrashed@gmail.com
 
-## Links
-- [Demo](https://adibaicon.vercel.app)
-- [Documentation](https://adibaicon.vercel.app/doc.html)
-- [Icon Gallery](https://adibaicon.vercel.app/icons.html)
-- [GitHub Repository](https://github.com/jmrashed/adibaicon)
+## 📚 Documentation
+
+- [📖 Full Documentation](docs/README.md)
+- [🎨 Icon Gallery](https://adibaicon.vercel.app/icons.html)
+- [🚀 Live Demo](https://adibaicon.vercel.app)
+- [📋 Release History](RELEASES.md)
+- [🔧 Contributing](CONTRIBUTING.md)
+
+## 🔗 Links
+
+- **Demo**: https://adibaicon.vercel.app
+- **NPM**: https://www.npmjs.com/package/adibaicon
+- **GitHub**: https://github.com/jmrashed/adibaicon
+- **CDN**: https://cdn.jsdelivr.net/npm/adibaicon@latest/dist/css/adibaIcon.min.css
 
