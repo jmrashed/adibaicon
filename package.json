@@ -13,7 +13,7 @@
     "src/less/",
     "integrations/",
     "README.md",
-    "LICENSE.txt",
+    "LICENSE",
     "DISTRIBUTION.md"
   ],
   "scripts": {
@@ -82,6 +82,11 @@
     "type": "github",
     "url": "https://github.com/sponsors/jmrashed"
   },
+  "directories": {
+    "doc": "docs",
+    "example": "tools"
+  },
+  "os": ["darwin", "linux", "win32"],
   "engines": {
     "node": "22.x"
   },
