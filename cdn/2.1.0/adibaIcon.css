@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'adibaIcon';
-  src: url('../font/adibaIcon.eot?33726313');
-  src: url('../font/adibaIcon.eot?33726313#iefix') format('embedded-opentype'),
-       url('../font/adibaIcon.woff2?33726313') format('woff2'),
-       url('../font/adibaIcon.woff?33726313') format('woff'),
-       url('../font/adibaIcon.ttf?33726313') format('truetype'),
-       url('../font/adibaIcon.svg?33726313#adibaIcon') format('svg');
+  src: url('../fonts/adibaIcon.eot?33726313');
+  src: url('../fonts/adibaIcon.eot?33726313#iefix') format('embedded-opentype'),
+       url('../fonts/adibaIcon.woff2?33726313') format('woff2'),
+       url('../fonts/adibaIcon.woff?33726313') format('woff'),
+       url('../fonts/adibaIcon.ttf?33726313') format('truetype'),
+       url('../fonts/adibaIcon.svg?33726313#adibaIcon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'adibaIcon';
-    src: url('../font/adibaIcon.svg?33726313#adibaIcon') format('svg');
+    src: url('../fonts/adibaIcon.svg?33726313#adibaIcon') format('svg');
   }
 }
 */
@@ -366,62 +366,6 @@
 .adiba-check:before { content: '\e815'; color: #27ae60; }
 .adiba-plus:before { content: '\e813'; }
 .adiba-minus:before { content: '\e813'; transform: rotate(90deg); }
-
-/* Alternative style icons (style2) */
-.adiba-a-alt:before { content: '\e81a'; }
-.adiba-b-alt:before { content: '\e81b'; }
-.adiba-c-alt:before { content: '\e81c'; }
-.adiba-d-alt:before { content: '\e81d'; }
-.adiba-e-alt:before { content: '\e81e'; }
-.adiba-f-alt:before { content: '\e81f'; }
-.adiba-g-alt:before { content: '\e820'; }
-.adiba-h-alt:before { content: '\e821'; }
-.adiba-i-alt:before { content: '\e822'; }
-.adiba-j-alt:before { content: '\e823'; }
-.adiba-k-alt:before { content: '\e824'; }
-.adiba-l-alt:before { content: '\e825'; }
-.adiba-m-alt:before { content: '\e826'; }
-.adiba-n-alt:before { content: '\e827'; }
-.adiba-o-alt:before { content: '\e828'; }
-.adiba-p-alt:before { content: '\e829'; }
-.adiba-q-alt:before { content: '\e82a'; }
-.adiba-r-alt:before { content: '\e82b'; }
-.adiba-s-alt:before { content: '\e82c'; }
-.adiba-t-alt:before { content: '\e82d'; }
-.adiba-u-alt:before { content: '\e82e'; }
-.adiba-v-alt:before { content: '\e82f'; }
-.adiba-w-alt:before { content: '\e830'; }
-.adiba-x-alt:before { content: '\e831'; }
-.adiba-y-alt:before { content: '\e832'; }
-.adiba-z-alt:before { content: '\e833'; }
-
-/* Bold style icons (style3) */
-.adiba-a-bold:before { content: '\e834'; }
-.adiba-b-bold:before { content: '\e835'; }
-.adiba-c-bold:before { content: '\e836'; }
-.adiba-d-bold:before { content: '\e837'; }
-.adiba-e-bold:before { content: '\e838'; }
-.adiba-f-bold:before { content: '\e839'; }
-.adiba-g-bold:before { content: '\e83a'; }
-.adiba-h-bold:before { content: '\e83b'; }
-.adiba-i-bold:before { content: '\e83c'; }
-.adiba-j-bold:before { content: '\e83d'; }
-.adiba-k-bold:before { content: '\e83e'; }
-.adiba-l-bold:before { content: '\e83f'; }
-.adiba-m-bold:before { content: '\e840'; }
-.adiba-n-bold:before { content: '\e841'; }
-.adiba-o-bold:before { content: '\e842'; }
-.adiba-p-bold:before { content: '\e843'; }
-.adiba-q-bold:before { content: '\e844'; }
-.adiba-r-bold:before { content: '\e845'; }
-.adiba-s-bold:before { content: '\e846'; }
-.adiba-t-bold:before { content: '\e847'; }
-.adiba-u-bold:before { content: '\e848'; }
-.adiba-v-bold:before { content: '\e849'; }
-.adiba-w-bold:before { content: '\e84a'; }
-.adiba-x-bold:before { content: '\e84b'; }
-.adiba-y-bold:before { content: '\e84c'; }
-.adiba-z-bold:before { content: '\e84d'; }
 
 /* Accessibility Features */
 .adiba-sr-only {

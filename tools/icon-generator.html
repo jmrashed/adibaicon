@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>adibaIcon Generator</title>
+    <link rel="stylesheet" href="../css/adibaIcon.css">
+    <style>
+        .generator { max-width: 800px; margin: 20px auto; padding: 20px; }
+        .preview { font-size: 48px; margin: 20px 0; text-align: center; }
+        .code-output { background: #f5f5f5; padding: 15px; border-radius: 5px; margin: 10px 0; }
+        select, input { padding: 8px; margin: 5px; }
+    </style>
+</head>
+<body>
+    <div class="generator">
+        <h1>adibaIcon Code Generator</h1>
+        
+        <div>
+            <label>Icon:</label>
+            <select id="iconSelect">
+                <option value="a">A</option>
+                <option value="b">B</option>
+                <option value="home">Home</option>
+                <option value="user">User</option>
+                <option value="menu">Menu</option>
+            </select>
+            
+            <label>Size:</label>
+            <select id="sizeSelect">
+                <option value="xs">XS</option>
+                <option value="sm">SM</option>
+                <option value="md" selected>MD</option>
+                <option value="lg">LG</option>
+                <option value="xl">XL</option>
+            </select>
+            
+            <label>Color:</label>
+            <select id="colorSelect">
+                <option value="">Default</option>
+                <option value="primary">Primary</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+            </select>
+        </div>
+        
+        <div class="preview">
+            <i id="iconPreview" class="adiba-a adiba-md"></i>
+        </div>
+        
+        <div class="code-output">
+            <strong>HTML:</strong><br>
+            <code id="htmlOutput">&lt;i class="adiba-a adiba-md"&gt;&lt;/i&gt;</code>
+        </div>
+        
+        <div class="code-output">
+            <strong>React:</strong><br>
+            <code id="reactOutput">&lt;AdibaIcon icon="a" size="md" /&gt;</code>
+        </div>
+        
+        <button onclick="copyCode()">Copy HTML</button>
+    </div>
+    
+    <script>
+        function updatePreview() {
+            const icon = document.getElementById('iconSelect').value;
+            const size = document.getElementById('sizeSelect').value;
+            const color = document.getElementById('colorSelect').value;
+            
+            const preview = document.getElementById('iconPreview');
+            const classes = [`adiba-${icon}`, `adiba-${size}`];
+            if (color) classes.push(`adiba-${color}`);
+            
+            preview.className = classes.join(' ');
+            
+            const htmlCode = `<i class="${classes.join(' ')}"></i>`;
+            document.getElementById('htmlOutput').textContent = htmlCode;
+            
+            const reactProps = [`icon="${icon}"`, `size="${size}"`];
+            if (color) reactProps.push(`color="${color}"`);
+            document.getElementById('reactOutput').textContent = `<AdibaIcon ${reactProps.join(' ')} />`;
+        }
+        
+        function copyCode() {
+            const code = document.getElementById('htmlOutput').textContent;
+            navigator.clipboard.writeText(code);
+        }
+        
+        document.getElementById('iconSelect').addEventListener('change', updatePreview);
+        document.getElementById('sizeSelect').addEventListener('change', updatePreview);
+        document.getElementById('colorSelect').addEventListener('change', updatePreview);
+    </script>
+</body>
+</html>

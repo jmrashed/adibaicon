@@ -1,0 +1,55 @@
+// adibaIcon LESS Variables
+@adiba-font-family: 'adibaIcon';
+@adiba-font-path: '../fonts';
+@adiba-primary: #007bff;
+@adiba-success: #28a745;
+@adiba-danger: #dc3545;
+
+// Font face
+@font-face {
+  font-family: @adiba-font-family;
+  src: url('@{adiba-font-path}/adibaIcon.eot');
+  src: url('@{adiba-font-path}/adibaIcon.eot#iefix') format('embedded-opentype'),
+       url('@{adiba-font-path}/adibaIcon.woff2') format('woff2'),
+       url('@{adiba-font-path}/adibaIcon.woff') format('woff'),
+       url('@{adiba-font-path}/adibaIcon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Base styles
+[class^="adiba-"]:before,
+[class*=" adiba-"]:before {
+  font-family: @adiba-font-family;
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Icon classes
+.adiba-a:before { content: '\e800'; }
+.adiba-b:before { content: '\e801'; }
+.adiba-c:before { content: '\e802'; }
+
+// Size classes
+.adiba-xs { font-size: 12px; }
+.adiba-sm { font-size: 16px; }
+.adiba-md { font-size: 24px; }
+.adiba-lg { font-size: 32px; }
+.adiba-xl { font-size: 48px; }
+
+// Color classes
+.adiba-primary { color: @adiba-primary; }
+.adiba-success { color: @adiba-success; }
+.adiba-danger { color: @adiba-danger; }

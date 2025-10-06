@@ -1,0 +1,80 @@
+{
+  "version": "2.1.0",
+  "categories": {
+    "letters": {
+      "description": "Alphabet letters A-Z in multiple styles",
+      "icons": {
+        "adiba-a": { "code": "\\e800", "aliases": ["icon-a", "icon-style1-a"] },
+        "adiba-b": { "code": "\\e801", "aliases": ["icon-b", "icon-style1-b"] },
+        "adiba-c": { "code": "\\e802", "aliases": ["icon-c", "icon-style1-c"] },
+        "adiba-d": { "code": "\\e803", "aliases": ["icon-d", "icon-style1-d"] },
+        "adiba-e": { "code": "\\e804", "aliases": ["icon-e", "icon-style1-e"] },
+        "adiba-f": { "code": "\\e805", "aliases": ["icon-f", "icon-style1-f"] },
+        "adiba-g": { "code": "\\e806", "aliases": ["icon-g", "icon-style1-g"] },
+        "adiba-h": { "code": "\\e807", "aliases": ["icon-h", "icon-style1-h"] },
+        "adiba-i": { "code": "\\e808", "aliases": ["icon-i", "icon-style1-i"] },
+        "adiba-j": { "code": "\\e809", "aliases": ["icon-j", "icon-style1-j"] },
+        "adiba-k": { "code": "\\e80a", "aliases": ["icon-k", "icon-style1-k"] },
+        "adiba-l": { "code": "\\e80b", "aliases": ["icon-l", "icon-style1-l"] },
+        "adiba-m": { "code": "\\e80c", "aliases": ["icon-m", "icon-style1-m"] },
+        "adiba-n": { "code": "\\e80d", "aliases": ["icon-n", "icon-style1-n"] },
+        "adiba-o": { "code": "\\e80e", "aliases": ["icon-o", "icon-style1-o"] },
+        "adiba-p": { "code": "\\e80f", "aliases": ["icon-p", "icon-style1-p"] },
+        "adiba-q": { "code": "\\e810", "aliases": ["icon-q", "icon-style1-q"] },
+        "adiba-r": { "code": "\\e811", "aliases": ["icon-r", "icon-style1-r"] },
+        "adiba-s": { "code": "\\e812", "aliases": ["icon-s", "icon-style1-s"] },
+        "adiba-t": { "code": "\\e813", "aliases": ["icon-t", "icon-style1-t"] },
+        "adiba-u": { "code": "\\e814", "aliases": ["icon-u", "icon-style1-u"] },
+        "adiba-v": { "code": "\\e815", "aliases": ["icon-v", "icon-style1-v"] },
+        "adiba-w": { "code": "\\e816", "aliases": ["icon-w", "icon-style1-w"] },
+        "adiba-x": { "code": "\\e817", "aliases": ["icon-x", "icon-style1-x"] },
+        "adiba-y": { "code": "\\e818", "aliases": ["icon-y", "icon-style1-y"] },
+        "adiba-z": { "code": "\\e819", "aliases": ["icon-z", "icon-style1-z"] }
+      }
+    },
+    "ui": {
+      "description": "User interface elements and controls",
+      "icons": {
+        "adiba-home": { "code": "\\e807", "semantic": true, "description": "Home/house icon" },
+        "adiba-user": { "code": "\\e814", "semantic": true, "description": "User/person icon" },
+        "adiba-menu": { "code": "\\e804", "semantic": true, "description": "Menu/hamburger icon" },
+        "adiba-close": { "code": "\\e817", "semantic": true, "description": "Close/X icon" },
+        "adiba-search": { "code": "\\e812", "semantic": true, "description": "Search/magnifying glass" },
+        "adiba-settings": { "code": "\\e812", "semantic": true, "description": "Settings/gear icon" },
+        "adiba-info": { "code": "\\e808", "semantic": true, "description": "Information icon" },
+        "adiba-warning": { "code": "\\e816", "semantic": true, "description": "Warning/alert icon" },
+        "adiba-check": { "code": "\\e815", "semantic": true, "description": "Check/success icon" }
+      }
+    },
+    "arrows": {
+      "description": "Directional arrows and navigation",
+      "icons": {
+        "adiba-arrow-up": { "code": "\\e800", "transform": "rotate(-90deg)", "semantic": true },
+        "adiba-arrow-down": { "code": "\\e800", "transform": "rotate(90deg)", "semantic": true },
+        "adiba-arrow-left": { "code": "\\e800", "transform": "rotate(180deg)", "semantic": true },
+        "adiba-arrow-right": { "code": "\\e800", "semantic": true }
+      }
+    },
+    "social": {
+      "description": "Social media and communication icons",
+      "icons": {
+        "adiba-heart": { "code": "\\e807", "color": "#e74c3c", "semantic": true },
+        "adiba-star": { "code": "\\e812", "color": "#f1c40f", "semantic": true },
+        "adiba-like": { "code": "\\e813", "semantic": true },
+        "adiba-share": { "code": "\\e812", "semantic": true }
+      }
+    }
+  },
+  "styles": {
+    "regular": "Standard weight icons",
+    "alt": "Alternative style variant", 
+    "bold": "Bold/heavy weight variant"
+  },
+  "sizes": {
+    "xs": "12px",
+    "sm": "16px", 
+    "md": "24px",
+    "lg": "32px",
+    "xl": "48px"
+  }
+}

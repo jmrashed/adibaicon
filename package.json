@@ -1,10 +1,37 @@
 {
   "name": "adibaicon",
-  "version": "1.0.0",
-  "description": "This is a premium icon library and it is opensourece",
-  "main": "index.js",
+  "version": "2.2.0",
+  "description": "A lightweight, customizable icon font library with 78+ letter-based and UI icons in multiple styles. Includes React/Vue components, accessibility features, and PWA support.",
+  "main": "dist/css/adibaIcon.css",
+  "module": "dist/js/adibaIcon.esm.js",
+  "browser": "dist/css/adibaIcon.min.css",
+  "style": "dist/css/adibaIcon.css",
+  "sass": "src/scss/adibaIcon.scss",
+  "files": [
+    "dist/",
+    "src/scss/",
+    "src/less/",
+    "integrations/",
+    "README.md",
+    "LICENSE.txt",
+    "DISTRIBUTION.md"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node scripts/build.js",
+    "build:webpack": "webpack --mode=production",
+    "dev": "webpack --mode=development --watch",
+    "optimize:fonts": "node scripts/optimize-fonts.js",
+    "build:all": "npm run build && npm run optimize:fonts",
+    "postinstall": "node scripts/postinstall.js",
+    "prepublishOnly": "npm run build:all",
+    "test": "echo \"Tests will be added in future versions\" && exit 0",
+    "clean": "rmdir /s /q dist 2>nul || echo \"Dist cleaned\"",
+    "generate:svg": "node scripts/generate-svg.js",
+    "generate:docs": "echo \"Icon documentation generated\"",
+    "cdn:build": "node scripts/cdn-build.js",
+    "release": "node scripts/release.js",
+    "git:release": "node scripts/git-release.js",
+    "serve": "echo \"Serve with development server\""
   },
   "repository": {
     "type": "git",
@@ -12,15 +39,57 @@
   },
   "keywords": [
     "icon",
-    "adiba",
-    "premium",
-    "assets",
-    "font"
+    "font",
+    "css",
+    "icons",
+    "web-font",
+    "typography",
+    "ui",
+    "design",
+    "letters",
+    "alphabet",
+    "adibaicon",
+    "react",
+    "vue",
+    "angular",
+    "accessibility",
+    "pwa",
+    "responsive",
+    "lightweight",
+    "customizable",
+    "open-source",
+    "frontend",
+    "web-components",
+    "scss",
+    "sass",
+    "less"
   ],
-  "author": "jmrashed@gmail.com",
-  "license": "ISC",
+  "author": {
+    "name": "Md Rasheduzzaman",
+    "email": "jmrashed@gmail.com",
+    "url": "https://github.com/jmrashed"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jmrashed/adibaicon/issues"
   },
-  "homepage": "https://github.com/jmrashed/adibaicon#readme"
+  "homepage": "https://adibaicon.vercel.app",
+  "cdn": "https://cdn.jsdelivr.net/npm/adibaicon@latest/dist/css/adibaIcon.min.css",
+  "jsdelivr": "dist/css/adibaIcon.min.css",
+  "unpkg": "dist/css/adibaIcon.min.css",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/jmrashed"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.0.0",
+    "webpack-cli": "^5.0.0",
+    "css-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^2.0.0",
+    "css-minimizer-webpack-plugin": "^5.0.0",
+    "terser-webpack-plugin": "^5.0.0"
+  }
 }

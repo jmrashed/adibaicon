@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Community Showcase - adibaIcon</title>
+    <link rel="stylesheet" href="../css/adibaIcon.css">
+    <style>
+        .showcase { max-width: 1000px; margin: 20px auto; padding: 20px; }
+        .project { border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin: 20px 0; }
+        .project-icons { margin: 10px 0; }
+        .project-icons i { margin: 5px; font-size: 24px; }
+        .submit-btn { background: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="showcase">
+        <h1>Community Showcase</h1>
+        <p>See how others are using adibaIcon in their projects!</p>
+        
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio using adibaIcon for navigation and social links.</p>
+            <div class="project-icons">
+                <i class="adiba-home adiba-lg adiba-primary"></i>
+                <i class="adiba-user adiba-lg adiba-success"></i>
+                <i class="adiba-menu adiba-lg adiba-warning"></i>
+            </div>
+            <small>Submitted by: Developer123</small>
+        </div>
+        
+        <div class="project">
+            <h3>E-commerce Dashboard</h3>
+            <p>Admin dashboard with adibaIcon for clean, consistent UI elements.</p>
+            <div class="project-icons">
+                <i class="adiba-settings adiba-lg"></i>
+                <i class="adiba-search adiba-lg"></i>
+                <i class="adiba-heart adiba-lg"></i>
+            </div>
+            <small>Submitted by: WebDesigner</small>
+        </div>
+        
+        <button class="submit-btn" onclick="submitProject()">Submit Your Project</button>
+    </div>
+    
+    <script>
+        function submitProject() {
+            const name = prompt('Project Name:');
+            const description = prompt('Description:');
+            if (name && description) {
+                const projects = JSON.parse(localStorage.getItem('showcaseProjects') || '[]');
+                projects.push({ name, description, timestamp: Date.now() });
+                localStorage.setItem('showcaseProjects', JSON.stringify(projects));
+                alert('Project submitted for review!');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -3,6 +3,9 @@
   <head>
   <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#007bff">
   <style>
     html {
       font-size: 100%;
@@ -183,6 +186,7 @@
     </style>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/adibaIcon.min.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/doc.css">
     <link rel="stylesheet" href="css/style.css">
@@ -250,8 +254,10 @@
                                               </ul>
                                             </li>
                                             
-                                            <li class="single-list"><a href="icons.html" target="_blank" class="single">icons</a></li>
-                                            <li class="single-list"><a href="doc.html" target="_blank" class="single">Doc</a></li>
+                                            <li class="single-list"><a href="icons.html" target="_blank" class="single">Icons</a></li>
+                                            <li class="single-list"><a href="doc.html" target="_blank" class="single">Docs</a></li>
+                                            <li class="single-list"><a href="tools/icon-generator.html" target="_blank" class="single">Generator</a></li>
+                                            <li class="single-list"><a href="community/showcase.html" target="_blank" class="single">Showcase</a></li>
                                             <li class="single-list"><a href="https://github.com/jmrashed/adibaicon" target="_blank" class="single">
                                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="navbar-nav-svg" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"></path></svg>
                                             </a></li>
@@ -317,14 +323,19 @@
           </div>
           <div class="col-lg-6 mb-3">
             <h3 class="fw-semibold">Customizing via icons size & color</h3>
-            <p class="mb-0"> Increases the icon size to large <code> .icon-lg</code> <code> .icon-md</code></p>
+            <p class="mb-0"> New size classes: <code>.adiba-xs</code> <code>.adiba-sm</code> <code>.adiba-md</code> <code>.adiba-lg</code> <code>.adiba-xl</code></p>
+            <p class="mb-0"> New color classes: <code>.adiba-primary</code> <code>.adiba-success</code> <code>.adiba-red</code> <code>.adiba-blue</code></p>
 
             <div class="highlight highlight-text-html-basic notranslate position-relative overflow-auto mt-2" dir="auto">
-<pre><span class="pl-kos">&lt;</span><span class="pl-ent">i</span> <span class="pl-c1">class</span>="<span class="pl-s">adiba-icon icon-r icon-lg icon-red </span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">i</span><span class="pl-kos">&gt;</span>
-<span class="pl-kos">&lt;</span><span class="pl-ent">i</span> <span class="pl-c1">class</span>="<span class="pl-s">adiba-icon icon-a icon-lg icon-blue </span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">i</span><span class="pl-kos">&gt;</span>
-<span class="pl-kos">&lt;</span><span class="pl-ent">i</span> <span class="pl-c1">class</span>="<span class="pl-s">adiba-icon icon-s icon-lg icon-yellow </span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">i</span><span class="pl-kos">&gt;</span>
-<span class="pl-kos">&lt;</span><span class="pl-ent">i</span> <span class="pl-c1">class</span>="<span class="pl-s">adiba-icon icon-h icon-lg icon-purple</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">i</span><span class="pl-kos">&gt;</span>
-<span class="pl-kos">&lt;</span><span class="pl-ent">i</span> <span class="pl-c1">class</span>="<span class="pl-s">adiba-icon icon-e icon-lg icon-green</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">i</span><span class="pl-kos">&gt;</span>
+<pre><span class="pl-c"><!-- New unified naming (recommended) --></span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">i</span> <span class="pl-c1">class</span>="<span class="pl-s">adiba-r adiba-lg adiba-red</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">i</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">i</span> <span class="pl-c1">class</span>="<span class="pl-s">adiba-a-alt adiba-lg adiba-blue</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">i</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">i</span> <span class="pl-c1">class</span>="<span class="pl-s">adiba-s-bold adiba-lg adiba-yellow</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">i</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">i</span> <span class="pl-c1">class</span>="<span class="pl-s">adiba-h adiba-lg adiba-purple</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">i</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">i</span> <span class="pl-c1">class</span>="<span class="pl-s">adiba-e adiba-lg adiba-green</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">i</span><span class="pl-kos">&gt;</span>
+
+<span class="pl-c"><!-- Backward compatible (still works) --></span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">i</span> <span class="pl-c1">class</span>="<span class="pl-s">adiba-icon icon-r icon-lg icon-red</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">i</span><span class="pl-kos">&gt;</span>
 </pre>
             </div>
 
@@ -344,6 +355,12 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="analytics.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+      }
+    </script>
 
   </body>
 </html>

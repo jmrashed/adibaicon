@@ -1,0 +1,57 @@
+// adibaIcon Variables
+
+// Font settings
+$adiba-font-family: 'adibaIcon' !default;
+$adiba-font-path: '../fonts' !default;
+$adiba-font-display: swap !default;
+
+// Size variables
+$adiba-size-xs: 12px !default;
+$adiba-size-sm: 16px !default;
+$adiba-size-md: 24px !default;
+$adiba-size-lg: 32px !default;
+$adiba-size-xl: 48px !default;
+
+// Color variables
+$adiba-primary: #007bff !default;
+$adiba-secondary: #6c757d !default;
+$adiba-success: #28a745 !default;
+$adiba-danger: #dc3545 !default;
+$adiba-warning: #ffc107 !default;
+$adiba-info: #17a2b8 !default;
+$adiba-red: #ff0000 !default;
+$adiba-blue: #0000ff !default;
+$adiba-green: #00ff00 !default;
+$adiba-purple: #800080 !default;
+$adiba-orange: #ffa500 !default;
+$adiba-yellow: #ffff00 !default;
+
+// Icon codes
+$adiba-icons: (
+  'a': '\e800',
+  'b': '\e801',
+  'c': '\e802',
+  'd': '\e803',
+  'e': '\e804',
+  'f': '\e805',
+  'g': '\e806',
+  'h': '\e807',
+  'i': '\e808',
+  'j': '\e809',
+  'k': '\e80a',
+  'l': '\e80b',
+  'm': '\e80c',
+  'n': '\e80d',
+  'o': '\e80e',
+  'p': '\e80f',
+  'q': '\e810',
+  'r': '\e811',
+  's': '\e812',
+  't': '\e813',
+  'u': '\e814',
+  'v': '\e815',
+  'w': '\e816',
+  'x': '\e817',
+  'y': '\e818',
+  'z': '\e819'
+) !default;

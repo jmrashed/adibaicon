@@ -1,2 +1,8 @@
-# Local Netlify folder
-.netlify
+node_modules/
+dist/
+*.log
+.DS_Store
+.env
+.vscode/
+*.tmp
+*.temp
