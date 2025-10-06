@@ -155,8 +155,12 @@ MIT License - see [LICENSE.txt](LICENSE.txt)
 - [📖 Full Documentation](docs/README.md)
 - [🎨 Icon Gallery](https://adibaicon.vercel.app/icons.html)
 - [🚀 Live Demo](https://adibaicon.vercel.app)
-- [📋 Release History](RELEASES.md)
-- [🔧 Contributing](CONTRIBUTING.md)
+- [📋 Release History](docs/RELEASES.md)
+- [🔧 Contributing](docs/CONTRIBUTING.md)
+- [🔒 Security Policy](docs/SECURITY.md)
+- [📦 Distribution Guide](docs/DISTRIBUTION.md)
+- [🚀 Deployment Status](docs/DEPLOYMENT-STATUS.md)
+- [📝 Changelog](docs/CHANGELOG.md)
 
 ## 🔗 Links
 
