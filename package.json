@@ -32,7 +32,8 @@
     "release": "node scripts/release.js",
     "git:release": "node scripts/git-release.js",
     "serve": "echo \"Serve with development server\"",
-    "vercel-build": "npm run build:all"
+    "vercel-build": "npm run build:all",
+    "deploy": "node scripts/quick-deploy.js"
   },
   "repository": {
     "type": "git",

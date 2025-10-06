@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages (Simple)
+name: Deploy to GitHub Pages (Simple) - DISABLED
 
 on:
   push:
