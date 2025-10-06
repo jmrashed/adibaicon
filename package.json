@@ -32,7 +32,6 @@
     "release": "node scripts/release.js",
     "git:release": "node scripts/git-release.js",
     "serve": "echo \"Serve with development server\"",
-
     "deploy": "node scripts/quick-deploy.js"
   },
   "repository": {
@@ -84,7 +83,7 @@
     "url": "https://github.com/sponsors/jmrashed"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": "18.x"
   },
   "devDependencies": {},
   "dependencies": {}
