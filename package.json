@@ -22,7 +22,7 @@
     "dev": "webpack --mode=development --watch",
     "optimize:fonts": "node scripts/optimize-fonts.js",
     "build:all": "npm run build && npm run optimize:fonts",
-    "postinstall": "node scripts/postinstall.js",
+
     "prepublishOnly": "npm run build:all",
     "test": "echo \"Tests will be added in future versions\" && exit 0",
     "clean": "rmdir /s /q dist 2>nul || echo \"Dist cleaned\"",
