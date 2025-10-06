@@ -31,7 +31,8 @@
     "cdn:build": "node scripts/cdn-build.js",
     "release": "node scripts/release.js",
     "git:release": "node scripts/git-release.js",
-    "serve": "echo \"Serve with development server\""
+    "serve": "echo \"Serve with development server\"",
+    "vercel-build": "npm run build:all"
   },
   "repository": {
     "type": "git",
@@ -91,5 +92,6 @@
     "mini-css-extract-plugin": "^2.0.0",
     "css-minimizer-webpack-plugin": "^5.0.0",
     "terser-webpack-plugin": "^5.0.0"
-  }
+  },
+  "dependencies": {}
 }
