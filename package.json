@@ -92,7 +92,7 @@
     "example": "tools"
   },
   "engines": {
-    "node": "^18.0.0"
+    "node": "24.x"
   },
   "devDependencies": {
     "@testing-library/react": "^14.1.2",
