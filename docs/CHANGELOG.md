@@ -2,9 +2,35 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.2.3] - 2026-04-04
+
+### Added
+
+- TypeScript support for React/Vue components
+- Vitest testing framework with initial test suites
+- ESLint and Prettier code quality configuration
+- Webpack build system enhancements (source maps, ESM output)
+
+### Enhanced
+
+- Documentation structure and organization
+- Build tooling for better developer experience
+- Improved CI/CD pipeline foundations
+
+### Changed
+
+- Consolidated documentation into `/docs` directory
+- Removed legacy redundant files for cleaner distribution
+
+### Fixed
+
+- Vercel deployment configuration improvements
+- Documentation navigation consistency
+
 ## [2.2.2] - 2024-12-19
 
 ### Fixed
+
 - Fixed version switching navigation between v1.0.0 and v2.2.1 documentation
 - Updated CSS paths in v1.0.0 documentation files to use CDN links
 - Corrected Vercel configuration to serve from `docs/v2.2.1` as default directory
@@ -12,6 +38,7 @@ All notable changes to this project will be documented in this file.
 - Removed references to missing local CSS files in v1.0.0 docs
 
 ### Changed
+
 - Updated Vercel deployment configuration with proper rewrites
 - Improved navigation consistency across documentation versions
 - Enhanced version dropdown menus with proper active states
@@ -19,6 +46,7 @@ All notable changes to this project will be documented in this file.
 ## [2.2.1] - 2024-12-18
 
 ### Added
+
 - Complete documentation overhaul with modern design
 - Dark mode support for documentation
 - Interactive icon gallery with search functionality
@@ -30,6 +58,7 @@ All notable changes to this project will be documented in this file.
 - Migration guide from v1.x to v2.x
 
 ### Enhanced
+
 - 78+ icons across 3 different styles
 - Improved CSS organization and structure
 - Better browser compatibility
@@ -38,6 +67,7 @@ All notable changes to this project will be documented in this file.
 ## [1.0.0] - 2023-08-30
 
 ### Added
+
 - Initial release of adibaIcon library
 - 78 letter-based icons (A-Z) in 3 styles
 - Basic CSS implementation
