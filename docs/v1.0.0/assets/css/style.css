@@ -91,11 +91,11 @@
   border-radius: 50%;
 }
 
-.header-area .main-menu .listing .single-list:hover>.single {
+.header-area .main-menu .listing .single-list:hover > .single {
   color: var(--primary);
 }
 
-.header-area .main-menu .listing .single-list:hover>.single::before {
+.header-area .main-menu .listing .single-list:hover > .single::before {
   left: 0;
   right: auto;
   width: 100%;
@@ -126,37 +126,47 @@
   }
 }
 
-.header-area .main-menu .listing .listing.submenu>.single-list {
+.header-area .main-menu .listing .listing.submenu > .single-list {
   margin-left: 7px;
   display: block;
 }
 
-.header-area .main-menu .listing .listing.submenu>.single-list>.single {
+.header-area .main-menu .listing .listing.submenu > .single-list > .single {
   padding: 6px 10px !important;
   font-size: 16px;
   text-transform: capitalize;
 }
 
-.header-area .main-menu .listing .listing.submenu>.single-list>.single::before {
+.header-area
+  .main-menu
+  .listing
+  .listing.submenu
+  > .single-list
+  > .single::before {
   position: unset;
 }
 
-.header-area .main-menu .listing .listing.submenu>.single-list>.single:hover {
+.header-area
+  .main-menu
+  .listing
+  .listing.submenu
+  > .single-list
+  > .single:hover {
   color: var(--primary);
   background: none;
   padding-left: 13px !important;
 }
 
-.header-style-one .main-menu .listing>.single-list>.single {
+.header-style-one .main-menu .listing > .single-list > .single {
   color: #fff;
 }
 
-.header-style-one .main-menu .listing.submenu>.single-list>.single {
+.header-style-one .main-menu .listing.submenu > .single-list > .single {
   color: var(--primary-title);
   padding: 8px 14px;
 }
 
-.main-header .listing>.single-list:hover>.listing.submenu {
+.main-header .listing > .single-list:hover > .listing.submenu {
   visibility: visible;
   opacity: 1;
   top: 100%;
@@ -343,11 +353,11 @@ a {
   text-decoration: none;
 }
 
-.check-wrap.style-eight input[type="checkbox"] {
+.check-wrap.style-eight input[type='checkbox'] {
   display: none;
 }
 
-.check-wrap.style-eight input[type="checkbox"]+label {
+.check-wrap.style-eight input[type='checkbox'] + label {
   position: relative;
   font-size: 1rem;
   width: 20px;
@@ -364,8 +374,8 @@ a {
   cursor: pointer;
 }
 
-.check-wrap.style-eight input[type="checkbox"]+label:after {
-  content: "";
+.check-wrap.style-eight input[type='checkbox'] + label:after {
+  content: '';
   position: absolute;
   width: 0px;
   height: 6px;
@@ -379,13 +389,13 @@ a {
   transition: all ease-out 200ms;
 }
 
-.check-wrap.style-eight input[type="checkbox"]:checked+label {
+.check-wrap.style-eight input[type='checkbox']:checked + label {
   border: 1px solid transparent;
   background: #0d6efd;
   color: #0d6efd;
 }
 
-.check-wrap.style-eight input[type="checkbox"]:checked+label:after {
+.check-wrap.style-eight input[type='checkbox']:checked + label:after {
   opacity: 1;
   width: 11px;
 }
@@ -393,7 +403,6 @@ a {
 a:hover {
   text-decoration: none;
 }
-
 
 html {
   font-size: 100%;
@@ -427,7 +436,7 @@ input::-moz-focus-inner {
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #333;
@@ -452,7 +461,7 @@ a:hover {
 .row:before,
 .row:after {
   display: table;
-  content: "";
+  content: '';
   line-height: 0;
 }
 
@@ -478,7 +487,7 @@ a:hover {
 .container:before,
 .container:after {
   display: table;
-  content: "";
+  content: '';
   line-height: 0;
 }
 
@@ -509,7 +518,6 @@ h1 small {
 }
 
 .header {
-
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   padding-top: 10px;
@@ -556,7 +564,8 @@ h1 small {
 @font-face {
   font-family: 'adibaIcon';
   src: url('./font/adibaIcon.eot?46132523');
-  src: url('./font/adibaIcon.eot?46132523#iefix') format('embedded-opentype'),
+  src:
+    url('./font/adibaIcon.eot?46132523#iefix') format('embedded-opentype'),
     url('./font/adibaIcon.woff2?46132523') format('woff2'),
     url('./font/adibaIcon.woff?46132523') format('woff'),
     url('./font/adibaIcon.ttf?46132523') format('truetype'),
@@ -567,7 +576,7 @@ h1 small {
 }
 
 .adiba-icon {
-  font-family: "adibaIcon";
+  font-family: 'adibaIcon';
   font-style: normal;
   font-weight: normal;
   speak: never;
@@ -575,7 +584,7 @@ h1 small {
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
+  margin-right: 0.2em;
   text-align: center;
   /* opacity: .8; */
 
@@ -588,7 +597,7 @@ h1 small {
 
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
-  margin-left: .2em;
+  margin-left: 0.2em;
 
   /* You can be more comfortable with increased icons size */
   /* font-size: 120%; */

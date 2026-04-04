@@ -15,6 +15,7 @@ If you discover a security vulnerability, please send an email to jmrashed@gmail
 **Please do not report security vulnerabilities through public GitHub issues.**
 
 Include the following information:
+
 - Description of the vulnerability
 - Steps to reproduce
 - Potential impact
