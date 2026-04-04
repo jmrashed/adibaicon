@@ -11,24 +11,24 @@ const fontConfig = {
   subsets: {
     basic: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'],
     extended: ['n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
-    ui: ['home', 'user', 'menu', 'close', 'search', 'settings']
-  }
+    ui: ['home', 'user', 'menu', 'close', 'search', 'settings'],
+  },
 };
 
 // Generate subset CSS
 function generateSubsetCSS(subset, icons) {
   const baseCss = fs.readFileSync('src/css/adibaIcon.css', 'utf8');
   const fontFace = baseCss.split('/* New unified naming convention */')[0];
-  
+
   let subsetCss = fontFace;
-  icons.forEach(icon => {
+  icons.forEach((icon) => {
     const regex = new RegExp(`\\.adiba-${icon}:before[^}]+}`, 'g');
     const matches = baseCss.match(regex);
     if (matches) {
       subsetCss += '\n' + matches.join('\n');
     }
   });
-  
+
   const outputPath = `dist/css/adibaIcon.${subset}.css`;
   fs.writeFileSync(outputPath, subsetCss);
   console.log(`✅ Created ${subset} subset: ${icons.length} icons`);

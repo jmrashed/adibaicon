@@ -3,22 +3,26 @@
 ## Ways to Contribute
 
 ### 1. Icon Requests
+
 - Use the [Icon Request Form](community/icon-request.html)
 - Check existing requests before submitting
 - Provide clear use cases
 
 ### 2. Bug Reports
+
 - Open GitHub issues with detailed descriptions
 - Include browser and version information
 - Provide reproduction steps
 
 ### 3. Code Contributions
+
 - Fork the repository
 - Create feature branches
 - Follow existing code style
 - Add tests when applicable
 
 ### 4. Community Showcase
+
 - Submit your projects using adibaIcon
 - Share implementation examples
 - Help other developers

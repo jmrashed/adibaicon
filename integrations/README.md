@@ -22,7 +22,7 @@ import AdibaIcon from './integrations/react/AdibaIcon';
   <div>
     <!-- Basic usage -->
     <AdibaIcon icon="a" />
-    
+
     <!-- With size and color -->
     <AdibaIcon icon="home" size="lg" color="primary" />
   </div>
@@ -33,8 +33,8 @@ import AdibaIcon from './integrations/vue/AdibaIcon.vue';
 
 export default {
   components: {
-    AdibaIcon
-  }
+    AdibaIcon,
+  },
 };
 </script>
 ```

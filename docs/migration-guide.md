@@ -4,17 +4,18 @@
 
 ### Old vs New Naming
 
-| Old (Deprecated) | New (Recommended) | Status |
-|------------------|-------------------|---------|
-| `icon-style1-a` | `adiba-a` | ✅ Supported |
-| `icon-style2-a` | `adiba-a-alt` | ✅ Supported |
-| `icon-style3-a` | `adiba-a-bold` | ✅ Supported |
-| `icon-a` | `adiba-a` | ✅ Supported |
-| `adiba-icon icon-a` | `adiba-a` | ✅ Supported |
+| Old (Deprecated)    | New (Recommended) | Status       |
+| ------------------- | ----------------- | ------------ |
+| `icon-style1-a`     | `adiba-a`         | ✅ Supported |
+| `icon-style2-a`     | `adiba-a-alt`     | ✅ Supported |
+| `icon-style3-a`     | `adiba-a-bold`    | ✅ Supported |
+| `icon-a`            | `adiba-a`         | ✅ Supported |
+| `adiba-icon icon-a` | `adiba-a`         | ✅ Supported |
 
 ### Migration Steps
 
 1. **Replace old class names** with new unified naming:
+
 ```html
 <!-- Before -->
 <i class="adiba-icon icon-a icon-lg icon-red"></i>
@@ -24,6 +25,7 @@
 ```
 
 2. **Update size classes**:
+
 ```html
 <!-- Before -->
 <i class="icon-lg"></i>
@@ -33,6 +35,7 @@
 ```
 
 3. **Update color classes**:
+
 ```html
 <!-- Before -->
 <i class="icon-red"></i>
@@ -47,14 +50,20 @@ New semantic names for better readability:
 
 ```html
 <!-- Navigation -->
-<i class="adiba-home"></i>     <!-- Instead of adiba-h -->
-<i class="adiba-user"></i>     <!-- Instead of adiba-u -->
-<i class="adiba-menu"></i>     <!-- Instead of adiba-m -->
+<i class="adiba-home"></i>
+<!-- Instead of adiba-h -->
+<i class="adiba-user"></i>
+<!-- Instead of adiba-u -->
+<i class="adiba-menu"></i>
+<!-- Instead of adiba-m -->
 
 <!-- Actions -->
-<i class="adiba-search"></i>   <!-- Instead of adiba-s -->
-<i class="adiba-close"></i>    <!-- Instead of adiba-x -->
-<i class="adiba-settings"></i> <!-- Instead of adiba-s -->
+<i class="adiba-search"></i>
+<!-- Instead of adiba-s -->
+<i class="adiba-close"></i>
+<!-- Instead of adiba-x -->
+<i class="adiba-settings"></i>
+<!-- Instead of adiba-s -->
 ```
 
 ## Backward Compatibility
@@ -75,6 +84,7 @@ All old naming conventions are still supported:
 ## Framework Updates
 
 ### React Component
+
 ```jsx
 // Before
 <AdibaIcon icon="style1-a" size="lg" color="red" />
@@ -85,6 +95,7 @@ All old naming conventions are still supported:
 ```
 
 ### Vue Component
+
 ```vue
 <!-- Before -->
 <AdibaIcon icon="style1-a" size="lg" color="red" />

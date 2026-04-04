@@ -22,8 +22,11 @@ if (!fs.existsSync(versionDir)) {
 // Copy files
 const filesToCopy = [
   { src: 'dist/css/adibaIcon.css', dest: `${versionDir}/adibaIcon.css` },
-  { src: 'dist/css/adibaIcon.min.css', dest: `${versionDir}/adibaIcon.min.css` },
-  { src: 'dist/fonts', dest: `${versionDir}/fonts` }
+  {
+    src: 'dist/css/adibaIcon.min.css',
+    dest: `${versionDir}/adibaIcon.min.css`,
+  },
+  { src: 'dist/fonts', dest: `${versionDir}/fonts` },
 ];
 
 filesToCopy.forEach(({ src, dest }) => {
@@ -31,7 +34,7 @@ filesToCopy.forEach(({ src, dest }) => {
     if (fs.statSync(src).isDirectory()) {
       if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
       const files = fs.readdirSync(src);
-      files.forEach(file => {
+      files.forEach((file) => {
         fs.copyFileSync(`${src}/${file}`, `${dest}/${file}`);
       });
     } else {

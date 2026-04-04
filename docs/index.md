@@ -27,6 +27,7 @@ adibaicon/
 ## Build System
 
 ### Development
+
 ```bash
 npm run dev          # Watch mode
 npm run build        # Production build
@@ -34,11 +35,13 @@ npm run build:all    # Full build with optimizations
 ```
 
 ### Font Optimization
+
 ```bash
 npm run optimize:fonts  # Create font subsets
 ```
 
 ### Available Builds
+
 - `adibaIcon.css` - Full CSS
 - `adibaIcon.min.css` - Minified CSS
 - `adibaIcon.basic.css` - Basic subset (a-m)

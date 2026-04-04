@@ -7,7 +7,7 @@ console.log('🚀 Building adibaIcon...');
 
 // Create dist structure
 const dirs = ['dist', 'dist/css', 'dist/fonts', 'dist/js'];
-dirs.forEach(dir => {
+dirs.forEach((dir) => {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
@@ -26,7 +26,7 @@ fs.writeFileSync('dist/css/adibaIcon.min.css', cssMinified);
 
 // Copy fonts
 const fontFiles = fs.readdirSync('src/fonts');
-fontFiles.forEach(file => {
+fontFiles.forEach((file) => {
   fs.copyFileSync(`src/fonts/${file}`, `dist/fonts/${file}`);
 });
 
@@ -47,7 +47,10 @@ const updatedCss = distCss.replace(/url\('\.\.\/font\//g, "url('../fonts/");
 fs.writeFileSync('dist/css/adibaIcon.css', updatedCss);
 
 const distCssMin = fs.readFileSync('dist/css/adibaIcon.min.css', 'utf8');
-const updatedCssMin = distCssMin.replace(/url\('\.\.\/font\//g, "url('../fonts/");
+const updatedCssMin = distCssMin.replace(
+  /url\('\.\.\/font\//g,
+  "url('../fonts/"
+);
 fs.writeFileSync('dist/css/adibaIcon.min.css', updatedCssMin);
 
 // Generate SVG icons
